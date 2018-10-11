@@ -18,7 +18,7 @@ public class Course {
 		this.setCourseId(courseId);
 		this.setStudentTA(studentTA);
 		this.setAssociatedProfessor(accociatedProfessor);
-		this.setLectures(lectures);
+		this.setLectures(lecures);
 		this.setBoard(board);
 		this.setRoster(roster);
 	}

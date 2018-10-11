@@ -14,11 +14,11 @@ public class Course {
 	public Course() {
 		
 	}
-	public Course(String courseId, Student studentTA, Professor accociatedProfessor, List<Lecture> lectures, List<String> board, List<Long> roster) {
+	public Course(String courseId, Student studentTA, Professor accociatedProfessor, List<Lecture> lecures, List<String> board, List<Long> roster) {
 		this.setCourseId(courseId);
 		this.setStudentTA(studentTA);
 		this.setAssociatedProfessor(accociatedProfessor);
-		this.setLectures(lectures);
+		this.setLectures(lecures);
 		this.setBoard(board);
 		this.setRoster(roster);
 	}

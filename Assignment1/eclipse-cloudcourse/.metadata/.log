@@ -970,3 +970,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-10-11 14:45:28.868
 !MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-10-11 15:25:35.087
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-10-11 15:25:35.090
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

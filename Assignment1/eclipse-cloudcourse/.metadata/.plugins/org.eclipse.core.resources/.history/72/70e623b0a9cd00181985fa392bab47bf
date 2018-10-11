@@ -1,0 +1,40 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import com.csye6225.fall2018.coursepractise.datamodel.Course;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Lecture;
+import com.csye6225.fall2018.coursepractise.datamodel.Professor;
+import com.csye6225.fall2018.coursepractise.datamodel.Student;
+
+public class CoursesService {
+	static HashMap<String, Course> cour_Map = InMemoryDatabase.getCourseDB();
+	
+	//Getting a list of all courses
+	//GET "..webapi/courses
+	public List<Course> getAllCourses(){
+		ArrayList<Course> list = new ArrayList<>();
+		for(Course cour : cour_Map.values()) {
+			list.add(cour);
+		}
+		return list;
+	}
+	
+	//Adding a course
+	public void addCourse(String courseId,Student studentTA, Professor accociatedProfessor, List<Lecture> lectures, List<String> board, List<Long> roster) {
+		//Create a Course Object
+		Course cour = new Course(courseId, studentTA, accociatedProfessor, lectures, board, roster);
+		cour_Map.put(courseId, cour);
+	}
+	
+	public Course addCourse(Course cour) {
+		String courseId = cour.getCourseId();
+		cour_Map.put(courseId, cour);
+		return cour_Map.get(courseId);
+	}
+	
+	
+}
