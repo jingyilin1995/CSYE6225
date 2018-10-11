@@ -1,0 +1,7 @@
+INDEX VERSION 1.130
+C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\902133184.index
+\jersey-quickstart-webapp\src\main\java
+C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3842921995.index
+\coursepractise\src\main\java
+C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3074551536.index
+\courseservice\src\main\java

@@ -1,0 +1,10 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import com.csye6225.fall2018.coursepractise.datamodel.Professor;
+
+public class ProfessorsService {
+	
+	public List<Professor>getAllProfessors(){
+		Professor prof1 = new Professor(1L, "Tom", "InfoSystems")
+	}
+}

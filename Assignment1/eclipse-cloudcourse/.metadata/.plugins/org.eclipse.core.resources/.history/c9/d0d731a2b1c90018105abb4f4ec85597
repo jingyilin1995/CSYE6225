@@ -1,0 +1,8 @@
+package com.csye6225.fall2018.coursepractise;
+
+public class ProfessorService {
+	
+	public List<Professor>getAllProfessors(){
+		Professor prof1 = new Professor(1L, "Tom", "InfoSystems")
+	}
+}
