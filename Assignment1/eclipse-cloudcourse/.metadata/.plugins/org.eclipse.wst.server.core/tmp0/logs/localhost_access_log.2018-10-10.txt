@@ -113,3 +113,8 @@
 0:0:0:0:0:0:0:1 - - [10/Oct/2018:14:02:06 -0700] "POST /coursepractise/webapi/professors HTTP/1.1" 200 98
 0:0:0:0:0:0:0:1 - - [10/Oct/2018:14:02:21 -0700] "GET /coursepractise/webapi/professors/allprofessors HTTP/1.1" 200 298
 0:0:0:0:0:0:0:1 - - [10/Oct/2018:15:02:55 -0700] "GET /coursepractise/webapi/professors/allprofessors HTTP/1.1" 200 397
+127.0.0.1 - - [10/Oct/2018:19:54:28 -0700] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [10/Oct/2018:19:54:41 -0700] "GET /coursepractise/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [10/Oct/2018:19:54:56 -0700] "GET /coursepractise/webapi/professors/allprofessors HTTP/1.1" 200 100
+0:0:0:0:0:0:0:1 - - [10/Oct/2018:21:25:24 -0700] "GET /coursepractise/webapi/professors/allprofessors HTTP/1.1" 200 100
+0:0:0:0:0:0:0:1 - - [10/Oct/2018:21:25:26 -0700] "GET /coursepractise/webapi/professors/allprofessors HTTP/1.1" 200 2
