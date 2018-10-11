@@ -17,17 +17,18 @@ import com.csye6225.fall2018.coursepractise.datamodel.Course;
 import com.csye6225.fall2018.coursepractise.datamodel.Student;
 import com.csye6225.fall2018.coursepractise.service.StudentsService;
 
+//.. /webapi/myresource
 @Path("students")
 public class StudentsResource {
 
 		StudentsService studService = new StudentsService();
 		
-		@GET
-		@Path("/allstudents")
-		@Produces(MediaType.APPLICATION_JSON)
-		public List<Student> getAllStudents(){
-			return studService.getAllStudents();
-		}
+//		@GET
+//		@Path("/allstudents")
+//		@Produces(MediaType.APPLICATION_JSON)
+//		public List<Student> getAllStudents(){
+//			return studService.getAllStudents();
+//		}
 		
 		@GET
 		@Produces(MediaType.APPLICATION_JSON)
@@ -50,7 +51,7 @@ public class StudentsResource {
 		@Path("/{studentId}")
 		@Produces(MediaType.APPLICATION_JSON)
 		public Student deleteStudent(@PathParam("studentId") long studId) {
-			return studService.deleteProfessor(studId);
+			return studService.deleteStudent(studId);
 		}
 		
 		@POST

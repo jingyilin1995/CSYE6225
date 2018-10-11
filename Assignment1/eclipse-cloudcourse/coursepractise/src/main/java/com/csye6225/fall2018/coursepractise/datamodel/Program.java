@@ -1,6 +1,7 @@
 package com.csye6225.fall2018.coursepractise.datamodel;
 
 import java.util.List;
+import javax.xml.bind.annotation.XmlRootElement;
 
 public class Program {
 	private String programName;

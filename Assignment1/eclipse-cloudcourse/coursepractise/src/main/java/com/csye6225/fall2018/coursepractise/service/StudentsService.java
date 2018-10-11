@@ -42,7 +42,7 @@ public class StudentsService {
 	}
 	
 	//Deleting a Student
-	public Student deleteProfessor(Long studId) {
+	public Student deleteStudent(Long studId) {
 		Student deleteStudDetails = stud_Map.get(studId);
 		stud_Map.remove(studId);
 		return deleteStudDetails;
