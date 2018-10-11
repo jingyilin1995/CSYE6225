@@ -1,0 +1,7 @@
+1539110439474	Encapsulate field 'firstName'
+1539110461093	Encapsulate field 'department'
+1539110467892	Encapsulate field 'joiningDate'
+1539110476370	Encapsulate field 'professorId'
+1539110639526	Rename compilation unit 'professorResource.java'
+1539110687740	Rename type 'ProfessorResource'
+1539110714846	Rename compilation unit 'ProfessorService.java'

@@ -1,0 +1,7 @@
+package com.csye6225.fall2018.coursepractise.datamodel;
+
+public class InMemoryDatabase {
+	static HashMap<Long, Professor> professorDB = new HashMap<>();
+	
+	public List<Professor >
+}
