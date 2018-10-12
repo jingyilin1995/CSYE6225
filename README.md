@@ -1,2 +1,2 @@
-# INFO6225
-assignmentS of cloud computing class
+# CSYE6225
+Assignments of cloud computing class
