@@ -618,3 +618,76 @@
 2018-10-11 16:02:12,480 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
 2018-10-11 16:02:12,481 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-10-11 16:02:12,481 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 10:35:13,903 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-10-12 10:35:23,247 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:35:23,248 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 10:35:23,250 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:35:23,250 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 10:37:29,670 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:37:29,670 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 10:37:29,671 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:37:29,671 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 10:38:21,083 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:38:21,083 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 10:38:21,085 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:38:21,085 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 10:55:07,008 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:55:07,008 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 10:55:07,009 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 10:55:07,015 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:05:26,343 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:05:26,343 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:05:26,344 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:05:26,349 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:09:15,473 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:09:15,478 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:09:15,483 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:09:15,488 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:51:18,953 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:51:18,953 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:51:18,953 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:51:18,953 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:52:19,176 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:52:19,191 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:52:19,191 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:52:19,191 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:52:39,316 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:52:39,316 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:52:39,316 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:52:39,331 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:53:33,742 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:53:33,748 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:53:33,755 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:53:33,760 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:55:14,799 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:55:14,799 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:55:14,799 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:55:14,799 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 11:59:38,587 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:59:38,587 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 11:59:38,603 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 11:59:38,603 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 12:03:06,327 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:03:06,327 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 12:03:06,327 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:03:06,327 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 12:03:29,452 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:03:29,468 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 12:03:29,468 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:03:29,484 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 12:03:47,600 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:03:47,600 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 12:03:47,600 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:03:47,615 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 12:04:53,921 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:04:53,921 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 12:04:53,936 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:04:53,936 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 12:05:28,552 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:05:28,552 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 12:05:28,552 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:05:28,552 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
+2018-10-12 12:07:50,042 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:07:50,058 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\main\resources
+2018-10-12 12:07:50,058 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-10-12 12:07:50,058 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Jingyi\eclipse-cloudcourse\coursepractise\src\test\resources
