@@ -1,0 +1,5 @@
+127.0.0.1 - - [13/Oct/2018:10:09:49 -0700] "GET / HTTP/1.1" 404 1036
+127.0.0.1 - - [13/Oct/2018:10:10:19 -0700] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [13/Oct/2018:10:10:20 -0700] "GET /coursepractise/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [13/Oct/2018:10:11:51 -0700] "GET /coursepractise/webapi/courses/allcourses?studentta=Amy HTTP/1.1" 200 2
+0:0:0:0:0:0:0:1 - - [13/Oct/2018:10:12:05 -0700] "GET /coursepractise/webapi/programs/allprograms HTTP/1.1" 200 2

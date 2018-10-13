@@ -62,6 +62,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.csye6225.fall2018.lesson6practise"/>
 			<item value="com.csye6225.fall2018.courseservice"/>
 			<item value="org.glassfish.jersey.archetypes.jersey_quickstart_webapp"/>
 		</list>
@@ -70,6 +71,7 @@
 			<item value="org.glassfish.jersey.archetypes"/>
 		</list>
 		<list key="artifactId">
+			<item value="lesson6practise"/>
 			<item value="courseservice"/>
 			<item value="jersey-quickstart-webapp"/>
 		</list>
