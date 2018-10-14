@@ -111,7 +111,6 @@ public class CoursesResource {
 		return courService.updateTAInfo(courseId, student);
 	}
 	
-	//Update a course's professor Info
 	@PUT
 	@Path("/{courseId}/professor")
 	@Produces(MediaType.APPLICATION_JSON)

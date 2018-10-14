@@ -118,16 +118,4 @@ public class CoursesService {
 		}
 		return null;
 	}
-	
-	//Update a course's Professor's info
-	public Professor UpdateProfInfo(String courseId, Professor professor) {
-		for(Course cour: cour_Map.values()) {
-			if(cour.getCourseId().equals(courseId)) {
-				cour.setAssociatedProfessor(professor);
-				cour_Map.put(courseId, cour);
-				return cour_Map.get(courseId).getAssociatedProfessor();
-			}
-		}
-		return null;
-	}
 }

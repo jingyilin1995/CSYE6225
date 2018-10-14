@@ -39,14 +39,7 @@ public class CoursesResource {
 	}
 	
 	@GET
-	@Path("/{courseId}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Course getCoursesByCourseId(@PathParam("courseId") String courseId) {
-		return courService.getCourse(courseId);
-	}
-	
-	@GET
-	@Path("/professor/{professor}")
+	@Path("/{professor}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Course> getCoursesByProfessor(@PathParam("professor") String professor){
 		if(professor == null) {
@@ -64,20 +57,11 @@ public class CoursesResource {
 		return courService.getCourseByTA(studentta);
 	}
 	
-	//get TA's information by courseId
 	@GET
 	@Path("/{courseId}/TA")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Student getTAInfo(@PathParam("courseId") String courseId ) {
 		return courService.getTAInfo(courseId);
-	}
-	
-	//get Associated Professor's information by courseId
-	@GET
-	@Path("/{courseId}/professor")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Professor getProfInfo(@PathParam("courseId") String courseId) {
-		return courService.getProfInfo(courseId);
 	}
 	
 	@DELETE
@@ -100,24 +84,6 @@ public class CoursesResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Course updateCourse(@PathParam("courseId") String coursId, Course cour) {
 		return courService.updateCourseInformation(cour);
-	}
-	
-	//Update a course's TA Info
-	@PUT
-	@Path("/{courseId}/TA")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Student updateTAInfo(@PathParam("courseId") String courseId, Student student) {
-		return courService.updateTAInfo(courseId, student);
-	}
-	
-	//Update a course's professor Info
-	@PUT
-	@Path("/{courseId}/professor")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Professor updateProfInfo(@PathParam("courseId") String courseId, Professor professor) {
-		return courService.UpdateProfInfo(courseId, professor);
 	}
 
 }

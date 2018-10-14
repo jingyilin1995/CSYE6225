@@ -96,38 +96,4 @@ public class CoursesService {
 		}
 		return new Student();
 	}
-	
-	//Get the associated professor's info of a course
-	public Professor getProfInfo(String courseId) {
-		for(Course cour: cour_Map.values()) {
-			if(cour.getCourseId().equals(courseId)) {
-				return cour.getAssociatedProfessor();
-			}
-		}
-		return new Professor();
-	}
-	
-	//Update a course's TA's info
-	public Student updateTAInfo(String courseId, Student student) {
-		for(Course cour: cour_Map.values()) {
-			if(cour.getCourseId().equals(courseId)) {
-				cour.setStudentTA(student);
-				cour_Map.put(courseId, cour);
-				return cour_Map.get(courseId).getStudentTA();
-			}
-		}
-		return null;
-	}
-	
-	//Update a course's Professor's info
-	public Professor UpdateProfInfo(String courseId, Professor professor) {
-		for(Course cour: cour_Map.values()) {
-			if(cour.getCourseId().equals(courseId)) {
-				cour.setAssociatedProfessor(professor);
-				cour_Map.put(courseId, cour);
-				return cour_Map.get(courseId).getAssociatedProfessor();
-			}
-		}
-		return null;
-	}
 }

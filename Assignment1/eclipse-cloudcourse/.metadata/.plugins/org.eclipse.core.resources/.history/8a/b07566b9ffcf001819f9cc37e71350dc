@@ -110,14 +110,5 @@ public class CoursesResource {
 	public Student updateTAInfo(@PathParam("courseId") String courseId, Student student) {
 		return courService.updateTAInfo(courseId, student);
 	}
-	
-	//Update a course's professor Info
-	@PUT
-	@Path("/{courseId}/professor")
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Professor updateProfInfo(@PathParam("courseId") String courseId, Professor professor) {
-		return courService.UpdateProfInfo(courseId, professor);
-	}
 
 }
