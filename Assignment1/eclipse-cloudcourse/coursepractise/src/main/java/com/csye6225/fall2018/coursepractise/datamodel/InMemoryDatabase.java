@@ -11,6 +11,8 @@ public class InMemoryDatabase {
 	private static HashMap<Long, Lecture> lectureDB = new HashMap<>();
 	private static HashMap<String, Course> courseDB = new HashMap<>();
 	private static HashMap<Long, Program> programDB = new HashMap<>();
+	private static HashMap<Long, CourseBoard> courseBoardDB = new HashMap<>();
+	private static HashMap<Long, CourseRoster> courseRosterDB = new HashMap<>();
 
 	public static HashMap<Long, Professor> getProfessorDB() {
 		return professorDB;
@@ -26,6 +28,18 @@ public class InMemoryDatabase {
 	}
 	public static HashMap<Long, Program> getProgramDB() {
 		return programDB;
+	}
+	public static HashMap<Long, CourseBoard> getCourseBoardDB() {
+		return courseBoardDB;
+	}
+	public static void setCourseBoardDB(HashMap<Long, CourseBoard> courseBoardDB) {
+		InMemoryDatabase.courseBoardDB = courseBoardDB;
+	}
+	public static HashMap<Long, CourseRoster> getCourseRosterDB() {
+		return courseRosterDB;
+	}
+	public static void setCourseRosterDB(HashMap<Long, CourseRoster> courseRosterDB) {
+		InMemoryDatabase.courseRosterDB = courseRosterDB;
 	}
 	
 }

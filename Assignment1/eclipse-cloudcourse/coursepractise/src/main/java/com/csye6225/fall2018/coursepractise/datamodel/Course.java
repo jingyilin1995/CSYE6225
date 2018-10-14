@@ -8,19 +8,20 @@ public class Course {
 	private Student studentTA;
 	private Professor associatedProfessor;
 	private List<Lecture> lectures;
-	private List<String> board;
-	private List<Long> roster;
+	private CourseRoster roster;
+	private CourseBoard board;
 	
 	public Course() {
 		
 	}
-	public Course(String courseId, Student studentTA, Professor accociatedProfessor, List<Lecture> lectures, List<String> board, List<Long> roster) {
+	public Course(String courseId, Student studentTA, Professor accociatedProfessor, List<Lecture> lectures, CourseBoard board, CourseRoster roster ) {
 		this.setCourseId(courseId);
 		this.setStudentTA(studentTA);
 		this.setAssociatedProfessor(accociatedProfessor);
-		this.setLectures(lectures);
-		this.setBoard(board);
 		this.setRoster(roster);
+		this.setBoard(board);
+		this.setLectures(lectures);
+		
 	}
 	public String getCourseId() {
 		return courseId;
@@ -40,17 +41,17 @@ public class Course {
 	public void setAssociatedProfessor(Professor associatedProfessor) {
 		this.associatedProfessor = associatedProfessor;
 	}
-	public List<String> getBoard() {
-		return board;
-	}
-	public void setBoard(List<String> board) {
-		this.board = board;
-	}
-	public List<Long> getRoster() {
+	public CourseRoster getRoster() {
 		return roster;
 	}
-	public void setRoster(List<Long> roster) {
+	public void setRoster(CourseRoster roster) {
 		this.roster = roster;
+	}
+	public CourseBoard getBoard() {
+		return board;
+	}
+	public void setBoard(CourseBoard board) {
+		this.board = board;
 	}
 	public List<Lecture> getLectures() {
 		return lectures;

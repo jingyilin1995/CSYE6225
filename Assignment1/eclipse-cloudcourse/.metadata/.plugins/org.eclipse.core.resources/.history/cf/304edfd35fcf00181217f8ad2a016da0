@@ -1,0 +1,19 @@
+package com.csye6225.fall2018.coursepractise.datamodel;
+
+import java.util.List;
+
+public class CourseRoster {
+	
+	private long rosterId;
+	private String courseId;
+	private List<Student> rosterlist;
+	
+	public CourseRoster() {
+		
+	}
+	
+	public CourseRoster(long rosterId, String courseId, List<Student> rosterlist) {
+		
+	}
+
+}
