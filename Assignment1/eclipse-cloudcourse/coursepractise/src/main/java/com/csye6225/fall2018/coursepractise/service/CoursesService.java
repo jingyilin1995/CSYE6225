@@ -15,6 +15,7 @@ import com.csye6225.fall2018.coursepractise.datamodel.Student;
 public class CoursesService {
 	static HashMap<String, Course> cour_Map = InMemoryDatabase.getCourseDB();
 	CourseRostersService rosterService = new CourseRostersService();
+	CourseBoardsService boardService = new CourseBoardsService();
 	
 	
 	//Getting a list of all courses
@@ -32,6 +33,7 @@ public class CoursesService {
 		//Create a Course Object
 		Course cour = new Course(courseId, studentTA, accociatedProfessor, lectures, board, roster);
 		rosterService.addCourseRoster(roster);
+		boardService.addCourseBoard(board);
 		cour_Map.put(courseId, cour);
 	}
 	
@@ -39,6 +41,7 @@ public class CoursesService {
 		String courseId = cour.getCourseId();
 		cour_Map.put(courseId, cour);
 		rosterService.addCourseRoster(cour.getRoster());
+		boardService.addCourseBoard(cour.getBoard());
 		return cour_Map.get(courseId);
 	}
 	
@@ -51,6 +54,7 @@ public class CoursesService {
 	public Course deleteCourse(String courId) {
 		Course deletedCourDetails = cour_Map.get(courId);
 		rosterService.deleteRoster(courId);
+		boardService.deleteBoard(courId);
 		cour_Map.remove(courId);
 		return deletedCourDetails;
 	}
