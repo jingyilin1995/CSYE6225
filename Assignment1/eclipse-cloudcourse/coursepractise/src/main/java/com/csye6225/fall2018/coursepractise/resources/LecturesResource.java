@@ -1,6 +1,5 @@
 package com.csye6225.fall2018.coursepractise.resources;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -16,8 +15,7 @@ import javax.ws.rs.core.MediaType;
 import com.csye6225.fall2018.coursepractise.datamodel.Lecture;
 import com.csye6225.fall2018.coursepractise.service.LecturesService;
 
-//../webapi/myresource
-@Path("lectures")
+@Path("courses")
 public class LecturesResource {
 	LecturesService lectService = new LecturesService();
 	
@@ -36,39 +34,33 @@ public class LecturesResource {
 		return lectService.getAllLectures();
 	}
 	
-	//...webapi/lecture/1
 	@GET
-	@Path("/{lectureId}")
+	@Path("{courseId}/lectures")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Lecture getLecture(@PathParam("lectureId") long lectId) {
-		return lectService.getLecture(lectId);
+	public List<Lecture> getLectureByCourse(@PathParam("courseId") String courseId) {
+		return lectService.getAllLectures(courseId);
 	}
 	
 	@DELETE
-	@Path("/{lectureId}")
+	@Path("{courseId}/lectures")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Lecture deleteLecture(@PathParam("lectureId") long lectId) {
-		return lectService.deleteLecture(lectId);
+	public List<Lecture> deleteLectureByCourse(@PathParam("courseId") String courseId, Lecture lecture){
+		return lectService.deleteLectureofaCourse(courseId, lecture.getLectureId());
 	}
 	
 	@POST
+	@Path("{courseId}/lectures")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Lecture addLecture(Lecture lect) {
-		return lectService.addLecture(lect);
+	public List<Lecture> addlectureToCourse(@PathParam("courseId") String courseId, Lecture lecture){
+		return lectService.addLecture(courseId,lecture);
 	}
 	
 	@PUT
-	@Path("/{lectureId}")
+	@Path("{courseId}/lectures")
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public Lecture updateLecture(@PathParam("lectureId") long lectId, Lecture lect) {
-		return lectService.updateLecture(lectId, lect);
+	public List<Lecture> updatelectureToCourse(@PathParam("courseId") String courseId, Lecture lecture){
+		return lectService.updateLecture(courseId, lecture);
 	}
-	
-	public void addLecture(List<String> notes, List<String> materials ) {
-		lectService.addLecture(notes, materials);
-	}
-	
-
 }

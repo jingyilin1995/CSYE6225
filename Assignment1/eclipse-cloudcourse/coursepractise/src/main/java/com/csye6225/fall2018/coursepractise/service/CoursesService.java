@@ -16,6 +16,7 @@ public class CoursesService {
 	static HashMap<String, Course> cour_Map = InMemoryDatabase.getCourseDB();
 	CourseRostersService rosterService = new CourseRostersService();
 	CourseBoardsService boardService = new CourseBoardsService();
+	LecturesService lectureService = new LecturesService();
 	
 	
 	//Getting a list of all courses
@@ -34,6 +35,10 @@ public class CoursesService {
 		Course cour = new Course(courseId, studentTA, accociatedProfessor, lectures, board, roster);
 		rosterService.addCourseRoster(roster);
 		boardService.addCourseBoard(board);
+		for(Lecture lecture: lectures) {
+			lectureService.addLecture(lecture);
+		}
+		
 		cour_Map.put(courseId, cour);
 	}
 	
@@ -55,6 +60,7 @@ public class CoursesService {
 		Course deletedCourDetails = cour_Map.get(courId);
 		rosterService.deleteRoster(courId);
 		boardService.deleteBoard(courId);
+		lectureService.deleteLecture(courId);
 		cour_Map.remove(courId);
 		return deletedCourDetails;
 	}

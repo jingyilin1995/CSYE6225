@@ -34,7 +34,10 @@ public class CoursesResource {
 		String courseId = "CYSE6225";
 		CourseRoster roster = new CourseRoster(0, courseId, new ArrayList<Student>());
 		CourseBoard board = new CourseBoard(0,courseId);
-		courService.addCourse(courseId, new Student(), new Professor(), new ArrayList<Lecture>(), board, roster);	
+		Lecture lecture = new Lecture(0,courseId, new ArrayList<String>(), new ArrayList<String>());
+		List<Lecture> list = new ArrayList<Lecture>();
+		list.add(lecture);
+		courService.addCourse(courseId, new Student(), new Professor(), list, board, roster);	
 		return courService.getAllCourses();
 	}
 	

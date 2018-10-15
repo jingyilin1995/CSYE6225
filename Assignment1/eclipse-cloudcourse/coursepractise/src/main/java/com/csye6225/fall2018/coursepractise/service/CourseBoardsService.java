@@ -38,6 +38,7 @@ public class CourseBoardsService {
 			if(board.getCourseId().equals(courseId)) {
 				board_Map.remove(board.getBoardId());
 			}
+			break;//one course can only have on board
 		}
 	}
 }

@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 public class Lecture {
 	private long lectureId;
+	private String courseId;
 	private List<String> notes;
 	private List<String> materials;
 
@@ -12,10 +13,11 @@ public class Lecture {
 		
 	}
 	
-	public Lecture(long lectureId, List<String> notes, List<String> materials) {
+	public Lecture(long lectureId, String courseId, List<String> notes, List<String> materials) {
 		this.setLectureId(lectureId);
 		this.setNotes(notes);
 		this.setMaterials(materials);
+		this.courseId = courseId;
 	}
 
 	public long getLectureId() {
@@ -40,6 +42,14 @@ public class Lecture {
 
 	public void setMaterials(List<String> materials) {
 		this.materials = materials;
+	}
+
+	public String getCourseId() {
+		return courseId;
+	}
+
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
 	}
 }
 

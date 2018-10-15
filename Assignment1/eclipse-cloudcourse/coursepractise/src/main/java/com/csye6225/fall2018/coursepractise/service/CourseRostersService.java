@@ -3,13 +3,14 @@ package com.csye6225.fall2018.coursepractise.service;
 import java.util.HashMap;
 import java.util.List;
 
+import com.csye6225.fall2018.coursepractise.datamodel.Course;
 import com.csye6225.fall2018.coursepractise.datamodel.CourseRoster;
 import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
 import com.csye6225.fall2018.coursepractise.datamodel.Student;
 
 public class CourseRostersService {
 	static HashMap<Long,CourseRoster> roster_Map = InMemoryDatabase.getCourseRosterDB();
-	
+	static HashMap<String, Course> cour_Map = InMemoryDatabase.getCourseDB();	
 	//adding a roster
 	public void addCourseRoster(String courseId, List<Student> rosterlist) {
 		long nextAvailableId = roster_Map.size() + 1;
@@ -52,6 +53,7 @@ public class CourseRostersService {
 			if(roster.getCourseId().equals(courseId)) {
 				roster_Map.remove(roster.getRosterId());
 			}
+			break;//one course can only have one roster
 		}
 	}
 	
@@ -79,6 +81,12 @@ public class CourseRostersService {
 					}
 				}
 				updateRoster = roster;
+			}
+		}
+		for(Course cour : cour_Map.values()) {
+			if(cour.getCourseId().equals(courseId)) {
+				cour.setRoster(updateRoster);
+				cour_Map.put(courseId, cour);
 			}
 		}
 		return updateRoster;
