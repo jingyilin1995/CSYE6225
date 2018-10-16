@@ -58,15 +58,49 @@ public class ProgramsService {
 		return prog;
 	}
 	
+	//Add a course to a program
+	public List<Course> addACourseToProg(Long progId, Course cour){
+		List<Course> oldlist = prog_Map.get(progId).getCourses();
+		Program oldprog = prog_Map.get(progId);
+		oldlist.add(cour);
+		oldprog.setCourses(oldlist);
+		prog_Map.put(progId, oldprog);
+		return prog_Map.get(progId).getCourses();			
+	}
+	
 	//Get programs of a particular name
-	public List<Program> getProgramsByName(String program){
-		ArrayList<Program> list = new ArrayList<>();
+	public Program getProgramsByName(String program){
 		for(Program prog : prog_Map.values()) {
 			if(prog.getProgramName().equals(program)) {
-				list.add(prog);
+				return prog;
 			}
 		}
-		return list;
+		return null;
+	}
+	
+	//Get all courses of a program
+	public List<Course> getAllCoursesOfProg(Long programId){
+		return prog_Map.get(programId).getCourses();
+	}
+	
+	//Get all students of a program
+	public List<Student> getAllStudentsOfProg(Long programId){
+		return prog_Map.get(programId).getStudents();
+	}
+	
+	//Delete a course of a program
+	public List<Course> deleteACourseOfProg(Long programId, String courseId){
+		Program oldprog = prog_Map.get(programId);
+		List<Course> newlist = new ArrayList<Course>();
+		for(int i =0; i<oldprog.getCourses().size();i++) {
+			if(!oldprog.getCourses().get(i).getCourseId().equals(courseId)) {
+				newlist.add(oldprog.getCourses().get(i));
+			}
+		}
+		oldprog.setCourses(newlist);
+		prog_Map.put(programId, oldprog);
+		return prog_Map.get(programId).getCourses();
+		
 	}
 	
 }
