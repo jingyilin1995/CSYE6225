@@ -43,16 +43,16 @@ public class ProgramsResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Program getProgramByname(@QueryParam("program") String program) {
-	//	String name = "IS";
-	//	List<Course> courselist = new ArrayList<Course>();
-	//	List<Student> studentlist = new ArrayList<Student>();
-	//	Course cour = new Course();
-	//	Student stud = new Student();
-	//	stud.setName("Felix");
-	//	cour.setCourseId("CYSE1234");
-	//	studentlist.add(stud);
-	//	courselist.add(cour);
-	//	progService.addProgram(name, studentlist, courselist);
+		String name = "IS";
+		List<Course> courselist = new ArrayList<Course>();
+		List<Student> studentlist = new ArrayList<Student>();
+		Course cour = new Course();
+		Student stud = new Student();
+		stud.setName("Felix");
+		cour.setCourseId("CYSE1234");
+		studentlist.add(stud);
+		courselist.add(cour);
+		progService.addProgram(name, studentlist, courselist);
 		return progService.getProgramsByName(program);
 	}
 	
