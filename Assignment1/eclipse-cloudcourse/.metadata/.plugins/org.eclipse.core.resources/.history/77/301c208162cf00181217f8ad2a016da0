@@ -1,0 +1,8 @@
+package com.csye6225.fall2018.coursepractise.resources;
+
+import javax.ws.rs.Path;
+
+@Path("courses/roster")
+public class CourseRosterResource {
+
+}

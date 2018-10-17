@@ -1,0 +1,89 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import com.csye6225.fall2018.coursepractise.datamodel.Course;
+import com.csye6225.fall2018.coursepractise.datamodel.CourseBoard;
+import com.csye6225.fall2018.coursepractise.datamodel.CourseRoster;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Lecture;
+import com.csye6225.fall2018.coursepractise.datamodel.Professor;
+import com.csye6225.fall2018.coursepractise.datamodel.Student;
+
+public class CoursesService {
+	static HashMap<String, Course> cour_Map = InMemoryDatabase.getCourseDB();
+	CourseRostersService rosterService = new CourseRostersService();
+	CourseBoardsService boardService = new CourseBoardsService();
+	
+	
+	//Getting a list of all courses
+	//GET "..webapi/courses
+	public List<Course> getAllCourses(){
+		ArrayList<Course> list = new ArrayList<>();
+		for(Course cour : cour_Map.values()) {
+			list.add(cour);
+		}
+		return list;
+	}
+	
+	//Adding a course
+	public void addCourse(String courseId,Student studentTA, Professor accociatedProfessor, List<Lecture> lectures, CourseBoard board, CourseRoster roster) {
+		//Create a Course Object
+		Course cour = new Course(courseId, studentTA, accociatedProfessor, lectures, board, roster);
+		rosterService.addCourseRoster(roster);
+		boardService.addCourseBoard(board);
+		cour_Map.put(courseId, cour);
+	}
+	
+	public Course addCourse(Course cour) {
+		String courseId = cour.getCourseId();
+		cour_Map.put(courseId, cour);
+		rosterService.addCourseRoster(cour.getRoster());
+		boardService.addCourseBoard(cour.getBoard());
+		return cour_Map.get(courseId);
+	}
+	
+	//Getting One Course
+	public Course getCourse(String courId) {
+		return cour_Map.get(courId);
+	}
+	
+	//Deleting a course
+	public Course deleteCourse(String courId) {
+		Course deletedCourDetails = cour_Map.get(courId);
+		rosterService.deleteRoster(courId);
+		boardService.deleteBoard(courId);
+		cour_Map.remove(courId);
+		return deletedCourDetails;
+	}
+	
+	//Updating Course Info
+	public Course updateCourseInformation(Course cour) {
+		cour_Map.put(cour.getCourseId(), cour );
+		return cour;
+	}
+	
+	//Get courses belongs to an associated professor
+	public List<Course> getCourseByProfessor(String professor){
+		ArrayList<Course> list = new ArrayList<>();
+		for(Course cour : cour_Map.values()) {
+			if(cour.getAssociatedProfessor().getFirstName().equals(professor)) {
+				list.add(cour);
+			}
+		}
+		return list;
+	}
+	
+	//Get course belongs to a studentTA
+	public List<Course> getCourseByTA(String ta){
+		ArrayList<Course> list = new ArrayList<>();
+		for(Course cour : cour_Map.values()) {
+			if(cour.getStudentTA().getName().equals(ta)) {
+				list.add(cour);
+			}
+		}
+		return list;		
+	}
+}

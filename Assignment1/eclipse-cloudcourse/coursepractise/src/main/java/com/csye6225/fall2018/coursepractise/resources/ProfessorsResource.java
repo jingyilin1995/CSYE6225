@@ -28,10 +28,10 @@ public class ProfessorsResource {
 	@Path("/allprofessors")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Professor> getAllProfessors(){
-		String name = "Sam";
-		String department = "Information Systems";
-		Date date = new Date();
-		addProfessor(name,department,date);
+	//	String name = "Sam";
+	//	String department = "Information Systems";
+	//	Date date = new Date();
+	//	addProfessor(name,department,date);
 		return profService.getAllProfessors();
 	}
 	

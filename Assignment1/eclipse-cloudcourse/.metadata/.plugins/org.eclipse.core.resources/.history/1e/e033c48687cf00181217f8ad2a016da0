@@ -1,0 +1,51 @@
+package com.csye6225.fall2018.coursepractise.resources;
+
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.csye6225.fall2018.coursepractise.datamodel.CourseRoster;
+import com.csye6225.fall2018.coursepractise.datamodel.Student;
+import com.csye6225.fall2018.coursepractise.service.CourseRostersService;
+
+@Path("courses")
+public class CourseRostersResource {
+	CourseRostersService rosterService = new CourseRostersService();
+	
+	@GET
+	@Path("{courseId}/roster")
+	@Produces(MediaType.APPLICATION_JSON)
+	public CourseRoster getRosterByCourse(@PathParam("courseId") String courseId) {
+		return rosterService.getRoster(courseId);
+	}
+	
+	@DELETE
+	@Path("{courseId}/roster")
+	@Produces(MediaType.APPLICATION_JSON)
+	public CourseRoster clearRosterlist(@PathParam("courseId") String courseId) {
+		return rosterService.clearRoster(courseId);
+	}
+	
+	@POST
+	@Path("{courseId}/roster")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public CourseRoster addAStudentToRoster(@PathParam("courseId") String courseId, Student student) {
+		return rosterService.updateRosterAddStudent(courseId, student);
+	}
+	
+	@PUT
+	@Path("{courseId}/roster")
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public CourseRoster deleteStudentFromRoster(@PathParam("courseId") String courseId, long studentId) {
+		return rosterService.updateRosterDeleteStudent(courseId, studentId);
+	}
+}
