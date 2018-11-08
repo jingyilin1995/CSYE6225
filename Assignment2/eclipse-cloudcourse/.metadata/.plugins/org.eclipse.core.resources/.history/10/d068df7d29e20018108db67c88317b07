@@ -1,0 +1,74 @@
+package com.csye6225.fall2018.coursepractise.datamodel;
+
+import java.util.List;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+
+@DynamoDBTable(tableName="course")
+public class Course {
+	private String courseId;
+	private long taId;
+	private long professorId;
+	private List<Long> lectures;
+	private long rosterId;
+	private long boardId;
+	private String department;
+	
+	public Course() {
+		
+	}
+	public Course(String courseId, long taId, long professorId, List<Long> lectures, long boardId, long rosterId, String department ) {
+		this.setCourseId(courseId);
+		this.setTaId(taId);
+		this.setProfessorId(professorId);
+		this.setLectures(lectures);
+		this.setBoardId(boardId);
+		this.setRosterId(rosterId);
+		this.setDepartment(department);
+		
+	}
+	public String getCourseId() {
+		return courseId;
+	}
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
+	}
+	public long getTaId() {
+		return taId;
+	}
+	public void setTaId(long taId) {
+		this.taId = taId;
+	}
+	public long getProfessorId() {
+		return professorId;
+	}
+	public void setProfessorId(long professorId) {
+		this.professorId = professorId;
+	}
+	public List<Long> getLectures() {
+		return lectures;
+	}
+	public void setLectures(List<Long> lectures) {
+		this.lectures = lectures;
+	}
+	public long getRosterId() {
+		return rosterId;
+	}
+	public void setRosterId(long rosterId) {
+		this.rosterId = rosterId;
+	}
+	public long getBoardId() {
+		return boardId;
+	}
+	public void setBoardId(long boardId) {
+		this.boardId = boardId;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+}

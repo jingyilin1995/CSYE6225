@@ -1,0 +1,181 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.csye6225.fall2018.coursepractise.datamodel.Course;
+import com.csye6225.fall2018.coursepractise.datamodel.CourseBoard;
+import com.csye6225.fall2018.coursepractise.datamodel.CourseRoster;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.csye6225.fall2018.coursepractise.datamodel.Lecture;
+import com.csye6225.fall2018.coursepractise.datamodel.Professor;
+import com.csye6225.fall2018.coursepractise.datamodel.Student;
+
+public class CoursesService {
+	static HashMap<String, Course> cour_Map = InMemoryDatabase.getCourseDB();
+	CourseRostersService rosterService = new CourseRostersService();
+	CourseBoardsService boardService = new CourseBoardsService();
+	LecturesService lectureService = new LecturesService();
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+	
+	public CoursesService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	
+	//Getting a list of all courses
+	//GET "..webapi/courses
+	public List<Course> getAllCourses(){
+/*		ArrayList<Course> list = new ArrayList<>();
+		for(Course cour : cour_Map.values()) {
+			list.add(cour);
+		}
+		return list;
+*/
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Course> scanResult = mapper.scan(Course.class, scanExpression);
+		return scanResult;
+	}
+	
+	//Adding a course
+	public void addCourse(String courseId,Student studentTA, Professor accociatedProfessor, List<Lecture> lectures, CourseBoard board, CourseRoster roster) {
+		//Create a Course Object
+		Course cour = new Course(courseId, studentTA, accociatedProfessor, lectures, board, roster);
+		rosterService.addCourseRoster(roster);
+		boardService.addCourseBoard(board);
+		for(Lecture lecture: lectures) {
+			lectureService.addLecture(lecture);
+		}
+		
+		cour_Map.put(courseId, cour);
+	}
+	
+	public Course addCourse(Course cour) {
+		String courseId = cour.getCourseId();
+		cour_Map.put(courseId, cour);
+		rosterService.addCourseRoster(cour.getRoster());
+		boardService.addCourseBoard(cour.getBoard());
+		return cour_Map.get(courseId);
+	}
+	
+	//Getting One Course
+	public Course getCourse(String courId) {
+		Course cour = mapper.load(Course.class, courId);
+		return cour;
+	}
+	
+	//Deleting a course
+	public Course deleteCourse(String courId) {
+		Course deletedCourDetails = cour_Map.get(courId);
+		rosterService.deleteRoster(courId);
+		boardService.deleteBoard(courId);
+		lectureService.deleteLecture(courId);
+		cour_Map.remove(courId);
+		return deletedCourDetails;
+	}
+	
+	//Updating Course Info
+	public Course updateCourseInformation(Course cour) {
+		cour_Map.put(cour.getCourseId(), cour );
+		return cour;
+	}
+	
+	//Get courses belongs to an associated professor
+	public List<Course> getCourseByProfessor(long professorId){
+/*		ArrayList<Course> list = new ArrayList<>();
+		for(Course cour : cour_Map.values()) {
+			if(cour.getAssociatedProfessor().getFirstName().equals(professor)) {
+				list.add(cour);
+			}
+		}
+		return list;
+*/
+		String professor2 = String.valueOf(professorId);
+		System.out.println(professorId);
+		System.out.println(professor2);
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withN(professor2));
+		
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("professorId = :val2").withExpressionAttributeValues(eav);
+		List<Course> scanResult = mapper.scan(Course.class, scanExpression);
+		return scanResult;
+	}
+	
+	//Get course belongs to a studentTA
+	public List<Course> getCourseByTA(long taId){
+/*		ArrayList<Course> list = new ArrayList<>();
+		for(Course cour : cour_Map.values()) {
+			if(cour.getStudentTA().getFirstName().equals(ta)) {
+				list.add(cour);
+			}
+		}
+		return list;	
+*/
+		String taId2 = String.valueOf(taId);
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withN(taId2));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("taId = :val2").withExpressionAttributeValues(eav);
+		List<Course> scanResult = mapper.scan(Course.class, scanExpression);
+		return scanResult;
+	}
+		
+	//Get a course's TA's info
+	public Student getTAInfo(String courseId) {
+		for(Course cour : cour_Map.values()) {
+			if(cour.getCourseId().equals(courseId)) {
+				return cour.getStudentTA();
+			}
+		}
+		return new Student();
+	}
+	
+	//Get the associated professor's info of a course
+	public Professor getProfInfo(String courseId) {
+/*		for(Course cour: cour_Map.values()) {
+			if(cour.getCourseId().equals(courseId)) {
+				return cour.getAssociatedProfessor();
+			}
+		}
+		return new Professor();
+*/	
+		Course cour =  mapper.load(Course.class, courseId);
+		long professorId = cour.getProfessorId();
+		Professor prof = mapper.load(Professor.class,professorId);
+		return prof;
+
+	}
+	
+	//Update a course's TA's info
+	public Student updateTAInfo(String courseId, Student student) {
+		for(Course cour: cour_Map.values()) {
+			if(cour.getCourseId().equals(courseId)) {
+				cour.setStudentTA(student);
+				cour_Map.put(courseId, cour);
+				return cour_Map.get(courseId).getStudentTA();
+			}
+		}
+		return null;
+	}
+	
+	//Update a course's Professor's info
+	public Professor UpdateProfInfo(String courseId, Professor professor) {
+		for(Course cour: cour_Map.values()) {
+			if(cour.getCourseId().equals(courseId)) {
+				cour.setAssociatedProfessor(professor);
+				cour_Map.put(courseId, cour);
+				return cour_Map.get(courseId).getAssociatedProfessor();
+			}
+		}
+		return null;
+	}
+}

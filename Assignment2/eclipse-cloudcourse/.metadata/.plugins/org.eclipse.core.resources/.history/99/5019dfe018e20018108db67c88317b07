@@ -1,0 +1,39 @@
+package com.csye6225.fall2018.coursepractise.datamodel;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+
+@DynamoDBTable(tableName="board")
+public class CourseBoard {
+	
+	private Long boardId;
+	private String courseId;
+	
+	public CourseBoard() {
+		
+	}
+	
+	public CourseBoard(Long boardId, String courseId) {
+		this.setBoardId(boardId);
+		this.setCourseId(courseId);
+	}
+	
+	@DynamoDBHashKey(attributeName = "boardId")
+	public long getBoardId() {
+		return boardId;
+	}
+
+	public void setBoardId(Long boardId) {
+		this.boardId = boardId;
+	}
+
+	@DynamoDBAttribute(attributeName = "courseId")
+	public String getCourseId() {
+		return courseId;
+	}
+
+	public void setCourseId(String courseId) {
+		this.courseId = courseId;
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DynamoDBTester.java&apos; to &apos;coursepractise/src/main/java/com.csye6225.fall2018.coursepractise.datamodel&apos;&#x0D;&#x0A;- Original project: &apos;lesson6practise&apos;&#x0D;&#x0A;- Destination element: &apos;coursepractise/src/main/java/com.csye6225.fall2018.coursepractise.datamodel&apos;&#x0D;&#x0A;- Original element: &apos;com.csye6225.fall2018.lesson6practise.DynamoDBTester.java&apos;" description="Copy compilation unit" destination="=coursepractise/src\/main\/java&lt;com.csye6225.fall2018.coursepractise.datamodel" element1="/src\/main\/java&lt;com.csye6225.fall2018.lesson6practise{DynamoDBTester.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1541138844091" units="1" version="1.0"/>
+</session>

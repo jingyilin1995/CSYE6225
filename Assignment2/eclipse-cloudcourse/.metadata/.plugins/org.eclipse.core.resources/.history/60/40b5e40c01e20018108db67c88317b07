@@ -1,0 +1,72 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import com.csye6225.fall2018.coursepractise.datamodel.Course;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Student;
+
+public class StudentsService {
+	static HashMap<Long, Student> stud_Map = InMemoryDatabase.getStudentDB();
+
+	//Getting a list of all students
+	//GET "..webapi/students"
+	public List<Student> getAllStudents(){
+		//Getting the list
+		ArrayList<Student> list = new ArrayList<>();
+		for(Student stud : stud_Map.values()) {
+			list.add(stud);
+		}
+		return list;
+	}
+	
+	//Adding a student
+	public void addStudent(String firstName, String lastName, String imageUrl, List<Course> courses, String department, String joiningDate) {
+		long nextAvailabledId = stud_Map.size() +1;
+		Student stud = new Student(firstName, lastName, nextAvailabledId, imageUrl, courses, department, joiningDate);
+		stud_Map.put(nextAvailabledId, stud);
+	}
+	
+	public Student addStudent(Student stud) {
+		long nextAvailabledId = stud_Map.size() +1;
+		stud.setStudentId(nextAvailabledId);
+		stud_Map.put(nextAvailabledId, stud);
+		return stud_Map.get(nextAvailabledId);
+	}
+	
+	//Getting one Student
+	public Student getStudent(Long studId) {
+		return stud_Map.get(studId);
+	}
+	
+	//Deleting a Student
+	public Student deleteStudent(Long studId) {
+		Student deleteStudDetails = stud_Map.get(studId);
+		stud_Map.remove(studId);
+		return deleteStudDetails;
+	}
+	
+	//Updating a Student Info
+	public Student updateStudent(Long studId, Student stud) {
+		Student oldStudObject = stud_Map.get(studId);
+		studId = oldStudObject.getStudentId();
+		stud.setStudentId(studId);
+		//Publishing New Values
+		stud_Map.put(studId, stud);
+		return stud;
+	}
+	
+	//Get students in a program
+	public List<Student> getStudentByProgram(String program){
+		//Getting the list
+		ArrayList<Student> list = new ArrayList<>();
+		for(Student stud : stud_Map.values()) {
+			if(stud.getDepartment().equals(program)) {
+				list.add(stud);
+			}
+		}
+		return list;
+	}
+}

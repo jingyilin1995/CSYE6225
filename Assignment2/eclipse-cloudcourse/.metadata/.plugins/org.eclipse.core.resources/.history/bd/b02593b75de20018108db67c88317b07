@@ -1,0 +1,112 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Professor;
+
+public class ProfessorsService {
+	static HashMap<Long, Professor> prof_Map = InMemoryDatabase.getProfessorDB();
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+	
+	public ProfessorsService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	
+	// Getting a list of all professor 
+	// GET "..webapi/professors"
+	public List<Professor> getAllProfessors() {	
+		//Getting the list
+//		ArrayList<Professor> list = new ArrayList<>();
+//		for (Professor prof : prof_Map.values()) {
+//			list.add(prof);
+//		}
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Professor> scanResult = mapper.scan(Professor.class,scanExpression);
+		return scanResult ;
+	}
+
+	// Adding a professor
+	public void addProfessor(String professorId, String firstName, String lastName, String department, String joiningDate) {
+		// Next Id 
+		
+		//Create a Professor Object
+		Professor prof = new Professor(professorId, firstName , lastName,
+				department, joiningDate);
+		mapper.save(prof);
+	}
+	
+	public Professor addProfessor(Professor prof) {	
+		mapper.save(prof);
+		return mapper.load(Professor.class, prof.getId());
+	}
+	
+	// Getting One Professor
+	public Professor getProfessor(String professorId) {
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(professorId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("professorId = :val2").withExpressionAttributeValues(eav);
+		List<Professor> scanResult = mapper.scan(Professor.class, scanExpression);
+		if(scanResult.size()!=0) {
+			return scanResult.get(0);
+		}
+		return null;
+	}
+	
+	// Deleting a professor
+	public Professor deleteProfessor(Long profId) {
+		Professor deletedProfDetails = mapper.load(Professor.class, profId);
+		mapper.delete(deletedProfDetails);
+		return deletedProfDetails;
+	}
+	
+	// Updating Professor Info
+	public Professor updateProfessorInformation(String professorId, Professor prof) {
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(professorId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("professorId = :val2").withExpressionAttributeValues(eav);
+		List<Professor> scanResult = mapper.scan(Professor.class, scanExpression);
+		if(scanResult.size()!=0) {
+			String Id = scanResult.get(0).getId();
+			prof.setProfessorId(professorId);
+			prof.setId(Id);
+			mapper.save(prof);
+		}
+		// Publishing New Values
+		return null;
+	}
+	
+	// Get professors in a department 
+	public List<Professor> getProfessorsByDepartment(String department) {	
+		//Getting the list
+//		ArrayList<Professor> list = new ArrayList<>();
+//		for (Professor prof : prof_Map.values()) {
+//			if (prof.getDepartment().equals(department)) {
+//				list.add(prof);
+//			}
+//		}
+//		return list ;
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+//		eav.put(":val1", new AttributeValue().withS("Professor"));
+		eav.put(":val2", new AttributeValue().withS(department));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("department = :val2").withExpressionAttributeValues(eav);
+		List<Professor> scanResult = mapper.scan(Professor.class, scanExpression);
+		return scanResult;
+	}
+	
+	// Get professors for a year with a size limit
+	
+}
