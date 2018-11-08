@@ -22,3 +22,7 @@
 1541627080894	Encapsulate field 'programName'
 1541627083880	Encapsulate field 'students'
 1541627087824	Encapsulate field 'courses'
+1541644364442	Encapsulate field 'Id'
+1541644368244	Encapsulate field 'announcementId'
+1541644371918	Encapsulate field 'announcementText'
+1541644376005	Encapsulate field 'boardId'

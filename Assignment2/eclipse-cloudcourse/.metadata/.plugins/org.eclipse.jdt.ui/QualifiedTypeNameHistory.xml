@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.service.ProfessorsService"/>
@@ -9,19 +8,14 @@
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.service.StudentsService"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.service.ProgramsService"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.Program"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.service.CourseRostersService"/>
 <fullyQualifiedTypeName name="javax.ws.rs.DELETE"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.Lecture"/>
 <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
-<fullyQualifiedTypeName name="javax.ws.rs.POST"/>
-<fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.CourseRoster"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase"/>
-<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.service.CourseBoardsService"/>
 <fullyQualifiedTypeName name="javax.ws.rs.GET"/>
-<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.CourseBoard"/>
 <fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
@@ -49,11 +43,21 @@
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBIndexHashKey"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.Course"/>
-<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute"/>
 <fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.AttributeValue"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBIndexRangeKey"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.service.AnnouncementsService"/>
+<fullyQualifiedTypeName name="org.eclipse.persistence.oxm.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.POST"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
+<fullyQualifiedTypeName name="com.csye6225.fall2018.coursepractise.datamodel.Announcement"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey"/>
 </qualifiedTypeNameHistroy>
