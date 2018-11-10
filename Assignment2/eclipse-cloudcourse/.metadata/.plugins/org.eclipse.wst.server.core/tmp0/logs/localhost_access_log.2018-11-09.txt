@@ -1,0 +1,4 @@
+127.0.0.1 - - [09/Nov/2018:20:00:19 -0800] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [09/Nov/2018:20:00:20 -0800] "GET /coursepractise/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [09/Nov/2018:20:00:31 -0800] "GET /coursepractise/webapi/myresource HTTP/1.1" 200 7
+0:0:0:0:0:0:0:1 - - [09/Nov/2018:20:00:49 -0800] "GET /coursepractise/webapi/courses/INFO5000/lectures HTTP/1.1" 200 165
