@@ -1,0 +1,53 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.csye6225.fall2018.coursepractise.datamodel.Announcement;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+
+public class AnnouncementsService {
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+	
+	public AnnouncementsService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	
+	//Adding a announcement
+	public Announcement addAnnouncement(Announcement ann) {
+		if(ann.getAnnouncementText().length()<=160)
+		{mapper.save(ann);}
+		return mapper.load(Announcement.class, ann.getId());
+	}
+	
+	//get all announcements
+	public List<Announcement> getAllAnnouncements(){
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Announcement> scanResult = mapper.scan(Announcement.class, scanExpression);
+		return scanResult;
+	}
+	
+	//get a announcement
+	public Announcement getAAnnouncement(String annId, long boardId) {
+		String boarId = String.valueOf(boardId);
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val1", new AttributeValue().withS(annId));
+		eav.put(":val2", new AttributeValue().withN(boarId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("annId = :val1 and boardId = :val2").withExpressionAttributeValues(eav);
+		List<Announcement> result = mapper.scan(Announcement.class, scanExpression);
+		if(result.size()!=0)
+		{
+			return result.get(0);
+		}
+		return null;
+	}
+}

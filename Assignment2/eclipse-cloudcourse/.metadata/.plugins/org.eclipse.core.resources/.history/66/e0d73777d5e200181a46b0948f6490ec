@@ -1,0 +1,154 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.security.KeyStore.Entry;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.csye6225.fall2018.coursepractise.datamodel.Course;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Lecture;
+import com.csye6225.fall2018.coursepractise.datamodel.Professor;
+
+public class LecturesService {
+	static HashMap<Long, Lecture> lect_Map = InMemoryDatabase.getLectureDB();
+	static HashMap<String, Course> cour_Map = InMemoryDatabase.getCourseDB();
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+	
+	public LecturesService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	//Getting a list of all lectures
+	//GET "..webapi/lectures"
+	public List<Lecture> getAllLectures(){
+		//Getting the list
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Lecture> scanResult = mapper.scan(Lecture.class,scanExpression);
+		return scanResult;
+	}
+	
+	//Getting a list of all lectures of a course
+	//GET "..webapi/courses/{courseId}/lectures
+	public List<Lecture> getAllLectures(String courseId){
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(courseId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("courseId = :val2").withExpressionAttributeValues(eav);
+		List<Lecture> scanResult = mapper.scan(Lecture.class, scanExpression);
+		return scanResult;
+	}
+	
+	//Adding a lecture: used when create a course
+	public void addLecture(Lecture lecture) {
+		mapper.save(lecture);
+	}
+
+	public List<Long> addLecture(String courseId, List<Long> lectures) {
+		for(int i=0;i<lectures.size();i++) {
+			Lecture lecture = new Lecture();
+			lecture.setCourseId(courseId);
+			lecture.setLectureId(lectures.get(i));
+			mapper.save(lecture);
+		}
+		return lectures;
+	}
+	//Adding a lecture: used when add a lecture to a course 
+	public Course addLecture(String courseId, Lecture lecture){
+		lecture.setCourseId(courseId);
+		mapper.save(lecture);
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(courseId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("courseId = :val2").withExpressionAttributeValues(eav);
+		List<Course> scanResult = mapper.scan(Course.class, scanExpression);
+		if(scanResult.size()!=0) {
+			Course cour = scanResult.get(0);
+			long lectureid = lecture.getLectureId();
+			List<Long> list = cour.getLectures();
+			list.add(lectureid);
+			cour.setLectures(list);
+			mapper.save(cour);
+			return mapper.load(Course.class, cour.getId());
+		}
+		return null;
+	}
+	
+	//Getting one lecture
+	public Lecture getLecture(Long lectId) {
+		return lect_Map.get(lectId);
+	}
+	
+	//Deleting lecture: used when deleteing a course
+	public void deleteLecture(String courseId) {
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(courseId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("courseId = :val2").withExpressionAttributeValues(eav);
+		List<Lecture> scanResult = mapper.scan(Lecture.class, scanExpression);
+		if(scanResult.size()!=0) {
+			for(int i=0;i<scanResult.size();i++) {
+				mapper.delete(scanResult.get(i));
+			}
+		}
+	}
+	
+	//Deleting a lecture of a course
+	public void deleteLectureofaCourse(String courseId, Long lectId){
+		Map<String, AttributeValue> eav2 = new HashMap<String, AttributeValue>();
+		eav2.put(":val3", new AttributeValue().withS(courseId));
+		DynamoDBScanExpression scanExpression2 = new DynamoDBScanExpression()
+				.withFilterExpression("courseId = :val3").withExpressionAttributeValues(eav2);
+		List<Course> scanResult2 = mapper.scan(Course.class, scanExpression2);
+		if(scanResult2.size()!=0) {
+			Course course = scanResult2.get(0);
+			List<Long> list = course.getLectures();
+			list.remove(lectId);
+			course.setLectures(list);
+			mapper.save(course);
+		}
+		
+		String lectureId = String.valueOf(lectId);
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(lectureId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("lectureId = :val2").withExpressionAttributeValues(eav);
+		List<Lecture> scanResult = mapper.scan(Lecture.class, scanExpression);
+		for(int i=0;i<scanResult.size();i++) {
+			mapper.delete(scanResult.get(i));
+		}
+	}
+	
+	//Updating a lecture Info
+	public void updateLecture(String courseId, Lecture lect) {
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(courseId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("courseId = :val2").withExpressionAttributeValues(eav);
+		List<Lecture> scanResult = mapper.scan(Lecture.class, scanExpression);
+		if(scanResult.size()!=0)
+		{
+			for(int i=0;i<scanResult.size();i++)
+			{
+				Lecture lecture = new Lecture();
+				lecture = scanResult.get(i);
+				if(lecture.getLectureId()==lect.getLectureId())
+				{
+					lect.setId(lecture.getId());
+					lect.setCourseId(lecture.getCourseId());
+					mapper.save(lect);
+				}
+			}
+		}
+	}
+	
+}

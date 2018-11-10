@@ -1,0 +1,39 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.List;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.csye6225.fall2018.coursepractise.datamodel.Announcement;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+
+public class AnnouncementsService {
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+	
+	public AnnouncementsService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	
+	//Adding a announcement
+	public Announcement addAnnouncement(Announcement ann) {
+		if(ann.getAnnouncementText().length()<=160)
+		{mapper.save(ann);}
+		return mapper.load(Announcement.class, ann.getId());
+	}
+	
+	//get all announcements
+	public List<Announcement> getAllAnnouncements(){
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Announcement> scanResult = mapper.scan(Announcement.class, scanExpression);
+		return scanResult;
+	}
+	
+	//get a announcement
+	public Announcement getAAnnouncement(String annId, long boardId) {
+		
+		return null;
+	}
+}

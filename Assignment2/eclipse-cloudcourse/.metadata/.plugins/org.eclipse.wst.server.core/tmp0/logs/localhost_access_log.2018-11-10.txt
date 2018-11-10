@@ -1,0 +1,9 @@
+127.0.0.1 - - [10/Nov/2018:10:11:03 -0800] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:16 -0800] "GET /coursepractise/webapi/courses/INFO5000/lectures HTTP/1.1" 200 165
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:18 -0800] "GET /coursepractise/webapi/courses/INFO5000/lectures HTTP/1.1" 200 165
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:19 -0800] "GET /coursepractise/webapi/courses/INFO5000/lectures HTTP/1.1" 200 165
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:30 -0800] "GET /coursepractise/webapi/courses/INFO5000 HTTP/1.1" 200 185
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:32 -0800] "GET /coursepractise/webapi/courses/INFO5000 HTTP/1.1" 200 185
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:41 -0800] "GET /coursepractise/webapi/announcements/1_ann04 HTTP/1.1" 200 150
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:42 -0800] "GET /coursepractise/webapi/announcements/1_ann04 HTTP/1.1" 200 150
+0:0:0:0:0:0:0:1 - - [10/Nov/2018:10:11:44 -0800] "GET /coursepractise/webapi/announcements/1_ann04 HTTP/1.1" 200 150

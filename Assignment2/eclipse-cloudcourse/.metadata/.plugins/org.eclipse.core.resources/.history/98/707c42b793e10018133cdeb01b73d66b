@@ -1,0 +1,99 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Professor;
+
+public class ProfessorsService {
+	static HashMap<Long, Professor> prof_Map = InMemoryDatabase.getProfessorDB();
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+	
+	public ProfessorsService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	
+	// Getting a list of all professor 
+	// GET "..webapi/professors"
+	public List<Professor> getAllProfessors() {	
+		//Getting the list
+//		ArrayList<Professor> list = new ArrayList<>();
+//		for (Professor prof : prof_Map.values()) {
+//			list.add(prof);
+//		}
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Professor> scanResult = mapper.scan(Professor.class,scanExpression);
+		return scanResult ;
+	}
+
+	// Adding a professor
+	public void addProfessor(String firstName, String lastName, String department, String joiningDate) {
+		// Next Id 
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Professor> scanResult = mapper.scan(Professor.class,scanExpression);
+		long nextAvailableId = scanResult.size() + 1;
+		
+		//Create a Professor Object
+		Professor prof = new Professor(nextAvailableId, firstName , lastName,
+				department, joiningDate);
+		mapper.save(prof);
+	}
+	
+	public Professor addProfessor(Professor prof) {	
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Professor> scanResult = mapper.scan(Professor.class,scanExpression);
+		long nextAvailableId = scanResult.size() + 1;
+		prof.setProfessorId(nextAvailableId);
+		mapper.save(prof);
+		return mapper.load(Professor.class, nextAvailableId);
+	}
+	
+	// Getting One Professor
+	public Professor getProfessor(Long profId) {
+		Professor prof2 = mapper.load(Professor.class, profId);
+		System.out.println("Item retrieved");
+		System.out.println(prof2.toString());
+		return prof2;
+	}
+	
+	// Deleting a professor
+	public Professor deleteProfessor(Long profId) {
+		Professor deletedProfDetails = mapper.load(Professor.class, profId);
+		mapper.delete(deletedProfDetails);
+		return deletedProfDetails;
+	}
+	
+	// Updating Professor Info
+	public Professor updateProfessorInformation(Long profId, Professor prof) {	
+		Professor oldProfObject = mapper.load(Professor.class, profId);
+		profId = oldProfObject.getProfessorId();
+		prof.setProfessorId(profId);
+		// Publishing New Values
+		mapper.save(prof);
+		
+		return prof;
+	}
+	
+	// Get professors in a department 
+	public List<Professor> getProfessorsByDepartment(String department) {	
+		//Getting the list
+		ArrayList<Professor> list = new ArrayList<>();
+		for (Professor prof : prof_Map.values()) {
+			if (prof.getDepartment().equals(department)) {
+				list.add(prof);
+			}
+		}
+		return list ;
+	}
+	
+	// Get professors for a year with a size limit
+	
+}

@@ -1,0 +1,96 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Student;
+
+public class StudentsService {
+	static HashMap<Long, Student> stud_Map = InMemoryDatabase.getStudentDB();
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+
+	public StudentsService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	//Getting a list of all students
+	//GET "..webapi/students"
+	public List<Student> getAllStudents(){
+		//Getting the list
+//		ArrayList<Student> list = new ArrayList<>();
+//		for(Student stud : stud_Map.values()) {
+//			list.add(stud);
+//		}
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Student> scanResult = mapper.scan(Student.class, scanExpression);
+		return scanResult;
+	}
+	
+	//Adding a student
+	public void addStudent(String firstName, String lastName, String imageUrl, List<Long> courses, String department, String joiningDate) {
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Student> scanResult = mapper.scan(Student.class, scanExpression);
+		long nextAvailabledId = scanResult.size() +1;
+		Student stud = new Student(firstName, lastName, nextAvailabledId, imageUrl, courses, department, joiningDate);
+		mapper.save(stud);
+	}
+	
+	public Student addStudent(Student stud) {
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Student> scanResult = mapper.scan(Student.class, scanExpression);
+		long nextAvailabledId = scanResult.size() +1;
+		stud.setStudentId(nextAvailabledId);
+		mapper.save(stud);
+		return mapper.load(Student.class,nextAvailabledId);
+	}
+	
+	//Getting one Student
+	public Student getStudent(Long studId) {
+		Student stud = mapper.load(Student.class, studId);
+		System.out.println("Item retrieved");
+		return stud;
+	}
+	
+	//Deleting a Student
+	public Student deleteStudent(Long studId) {
+		Student stud = mapper.load(Student.class, studId);
+		mapper.delete(stud);
+		return stud;
+	}
+	
+	//Updating a Student Info
+	public Student updateStudent(Long studId, Student stud) {
+		Student oldStudObject = stud_Map.get(studId);
+		studId = oldStudObject.getStudentId();
+		stud.setStudentId(studId);
+		//Publishing New Values
+		stud_Map.put(studId, stud);
+		return stud;
+	}
+	
+	//Get students in a program
+	public List<Student> getStudentByDepartment(String department){
+		//Getting the list
+//		ArrayList<Student> list = new ArrayList<>();
+//		for(Student stud : stud_Map.values()) {
+//			if(stud.getDepartment().equals(program)) {
+//				list.add(stud);
+//			}
+//		}
+//		return list;
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(department));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("department = :val2").withExpressionAttributeValues(eav);
+		List<Student> scanResult = mapper.scan(Student.class, scanExpression);
+		return scanResult;
+	}
+}

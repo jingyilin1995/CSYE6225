@@ -1,0 +1,142 @@
+package com.csye6225.fall2018.coursepractise.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.csye6225.fall2018.coursepractise.datamodel.Course;
+import com.csye6225.fall2018.coursepractise.datamodel.DynamoDbConnector;
+import com.csye6225.fall2018.coursepractise.datamodel.InMemoryDatabase;
+import com.csye6225.fall2018.coursepractise.datamodel.Program;
+import com.csye6225.fall2018.coursepractise.datamodel.Student;
+
+public class ProgramsService {
+	static HashMap<Long, Program> prog_Map = InMemoryDatabase.getProgramDB();
+	static DynamoDbConnector dynamoDb;
+	DynamoDBMapper mapper;
+	
+	public ProgramsService() {
+		dynamoDb = new DynamoDbConnector();
+		dynamoDb.init();
+		mapper = new DynamoDBMapper(dynamoDb.getClient());
+	}
+	//GET"...webapi/programs
+	public List<Program> getAllPrograms(){
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+		List<Program> scanResult = mapper.scan(Program.class, scanExpression);
+		return scanResult;
+	}
+	
+	//adding a program
+	public void addProgram(String programId, String name, List<String> students, List<String> courses) {
+		//next id
+		Program prog = new Program(programId, name, students, courses);
+		mapper.save(prog);
+	}
+	
+	public Program addProgram(Program prog) {
+		mapper.save(prog);
+		return mapper.load(Program.class, prog.getId());
+		
+	}
+	
+	//Getting one program
+	public Program getProgram(String progId) {
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(progId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("programId = :val2").withExpressionAttributeValues(eav);
+		List<Program> scanResult = mapper.scan(Program.class, scanExpression);
+		if(scanResult.size()!=0)
+		{
+			return scanResult.get(0);
+		}
+		return null;
+	}
+	
+	//Deleteing a program
+	public Program deleteProgram(Long progId) {
+		Program deletedProgDetails = prog_Map.get(progId);
+		prog_Map.remove(progId);
+		return deletedProgDetails;
+	}
+	
+	//Updating program info
+	public Program updateProgramInformation(Long progId, Program prog) {
+		Program oldProgObject = prog_Map.get(progId);
+		progId = oldProgObject.getProgramId();
+		prog.setProgramId(progId);
+		prog_Map.put(progId, prog);
+		return prog;
+	}
+	
+	//Add a course to a program
+	public List<Course> addACourseToProg(Long progId, Course cour){
+		List<Course> oldlist = prog_Map.get(progId).getCourses();
+		Program oldprog = prog_Map.get(progId);
+		oldlist.add(cour);
+		oldprog.setCourses(oldlist);
+		prog_Map.put(progId, oldprog);
+		return prog_Map.get(progId).getCourses();			
+	}
+	
+	//Get programs of a particular name
+	public Program getProgramsByName(String programName){
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(programName));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("programName = :val2").withExpressionAttributeValues(eav);
+		List<Program> scanResult = mapper.scan(Program.class, scanExpression);
+		if(scanResult.size()!=0)
+		{
+			return scanResult.get(0);
+		}
+		return null;
+	}
+	
+	//Get all courses of a program
+	public List<Course> getAllCoursesOfProg(String programId){
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":val2", new AttributeValue().withS(programId));
+		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
+				.withFilterExpression("programId = :val2").withExpressionAttributeValues(eav);
+		List<Program> scanResult = mapper.scan(Program.class, scanExpression);
+		if(scanResult.size()!=0)
+		{
+			Program program = scanResult.get(0);
+			String programName = program.getProgramName();
+			Map<String, AttributeValue> eav2 = new HashMap<String, AttributeValue>();
+			eav2.put(":val3", new AttributeValue().withS(programName));
+			DynamoDBScanExpression scanExpression2 = new DynamoDBScanExpression()
+					.withFilterExpression("department = :val3").withExpressionAttributeValues(eav2);
+			List<Course> scanResult2 = mapper.scan(Course.class, scanExpression2);
+			return scanResult2;
+		}
+		return null;
+	}
+	
+	//Get all students of a program
+	public List<Student> getAllStudentsOfProg(Long programId){
+		return prog_Map.get(programId).getStudents();
+	}
+	
+	//Delete a course of a program
+	public List<Course> deleteACourseOfProg(Long programId, String courseId){
+		Program oldprog = prog_Map.get(programId);
+		List<Course> newlist = new ArrayList<Course>();
+		for(int i =0; i<oldprog.getCourses().size();i++) {
+			if(!oldprog.getCourses().get(i).getCourseId().equals(courseId)) {
+				newlist.add(oldprog.getCourses().get(i));
+			}
+		}
+		oldprog.setCourses(newlist);
+		prog_Map.put(programId, oldprog);
+		return prog_Map.get(programId).getCourses();
+		
+	}
+	
+}
