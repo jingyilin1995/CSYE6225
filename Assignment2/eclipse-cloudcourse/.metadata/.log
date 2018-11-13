@@ -6312,3 +6312,125 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.jface.text 2 0 2018-11-11 13:32:24.627
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-11-12 11:05:02.600 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 11:05:30.715
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 11:05:31.304
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 11:05:31.847
+!MESSAGE AWS toolkit core plugin initialized after 1147 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 11:05:31.946
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-12 11:05:34.814
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-11-12 11:22:11.642
+!MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-11-12 12:01:23.272
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-11-12 12:01:23.276
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-11-12 12:15:55.728 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 12:16:16.105
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 12:16:16.633
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 12:16:17.210
+!MESSAGE AWS toolkit core plugin initialized after 1107 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 12:16:17.295
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-12 12:16:19.641
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-11-12 13:20:59.096 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 13:21:19.762
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 13:21:20.238
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 13:21:20.728
+!MESSAGE AWS toolkit core plugin initialized after 967 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 13:21:20.788
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-12 13:21:23.106
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-11-12 17:11:43.897 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 17:12:12.544
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 17:12:13.156
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 17:12:13.961
+!MESSAGE AWS toolkit core plugin initialized after 1418 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-11-12 17:12:14.190
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-11-12 17:12:17.819
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-11-12 17:12:57.268
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-11-12 17:12:57.277
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-11-12 17:19:07.728
+!MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
