@@ -38,7 +38,8 @@ public class AnnouncementsService {
 	//get a announcement
 	public Announcement getAAnnouncement(String annId, long boardId) {
 		String boarId = String.valueOf(boardId);
-		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+//		System.out.print(boarId);
+/*		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
 		eav.put(":val1", new AttributeValue().withS(annId));
 		eav.put(":val2", new AttributeValue().withN(boarId));
 		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
@@ -49,14 +50,15 @@ public class AnnouncementsService {
 			return result.get(0);
 		}
 		return null;
+*/
 
-
-/*		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
-		eav.put(":val1", new AttributeValue().withN(boarId));
-		eav.put(":val2", new AttributeValue().withS(annId));
+		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
+		eav.put(":boa", new AttributeValue().withN(boarId));
+		eav.put(":ann", new AttributeValue().withS(annId));
 		
 		DynamoDBQueryExpression<Announcement> queryExpression = new DynamoDBQueryExpression<Announcement>()
-				.withKeyConditionExpression("boardId = :val1 and annId = :val2").withExpressionAttributeValues(eav);
+				.withIndexName("boardId-annId-index").withConsistentRead(false)
+				.withKeyConditionExpression("boardId = :boa AND annId = :ann").withExpressionAttributeValues(eav);
 		List<Announcement> result = mapper.query(Announcement.class, queryExpression);
 		
 		if(result.size()!=0)
@@ -64,7 +66,7 @@ public class AnnouncementsService {
 			return result.get(0);
 		}
 		return null;
-*/
+
 	}
 	
 	//get annoucements by boardId
