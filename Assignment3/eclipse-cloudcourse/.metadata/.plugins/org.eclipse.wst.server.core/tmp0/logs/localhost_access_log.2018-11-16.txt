@@ -1,0 +1,7 @@
+127.0.0.1 - - [16/Nov/2018:20:48:15 -0800] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [16/Nov/2018:20:48:16 -0800] "GET /coursepractise/ HTTP/1.1" 200 247
+127.0.0.1 - - [16/Nov/2018:20:57:05 -0800] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [16/Nov/2018:21:01:44 -0800] "PUT /coursepractise/webapi/programs/COSCc HTTP/1.1" 500 6606
+0:0:0:0:0:0:0:1 - - [16/Nov/2018:21:02:29 -0800] "PUT /coursepractise/webapi/programs/COSC HTTP/1.1" 500 6606
+0:0:0:0:0:0:0:1 - - [16/Nov/2018:21:18:36 -0800] "PUT /coursepractise/webapi/programs/COSC HTTP/1.1" 200 152
+0:0:0:0:0:0:0:1 - - [16/Nov/2018:21:18:46 -0800] "PUT /coursepractise/webapi/programs/COSC HTTP/1.1" 200 143
