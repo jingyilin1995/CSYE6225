@@ -87,7 +87,6 @@ public class CoursesService {
 		System.out.println(rosterId);
 		cour.setBoardId(boardId);
 		cour.setRosterId(rosterId);
-		mapper.save(cour);
 		rosterService.addCourseRoster(cour.getRosterId(),cour.getCourseId());
 		boardService.addCourseBoard(cour.getBoardId(),cour.getCourseId());
 		lectureService.addLecture(cour.getCourseId(), cour.getLectures());
@@ -96,6 +95,7 @@ public class CoursesService {
 		System.out.println(createTopicResult);
 		System.out.println("CreateTopicRequest - " + snsClient.getCachedResponseMetadata(createTopicRequest));
 		cour.setNotificationTopic(createTopicResult.getTopicArn());
+		mapper.save(cour);
 		return mapper.load(Course.class,cour.getId());
 	}
 	

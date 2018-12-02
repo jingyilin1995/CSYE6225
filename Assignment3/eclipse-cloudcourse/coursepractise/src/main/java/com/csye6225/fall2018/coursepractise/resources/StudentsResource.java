@@ -1,5 +1,6 @@
 package com.csye6225.fall2018.coursepractise.resources;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -67,6 +68,15 @@ public class StudentsResource {
 		@Consumes(MediaType.APPLICATION_JSON)
 		public Student updateStudent(@PathParam("studentId") String studentId, Student stud) {
 			return studService.updateStudent(studentId, stud);
+		}
+		
+		//Register Student for Course action
+		@POST
+		@Path("/{studentId}/register")
+		@Produces(MediaType.APPLICATION_JSON)
+		@Consumes(MediaType.APPLICATION_JSON)
+		public Student registerCoursetoStudent(@PathParam("studentId") String studentId, ArrayList<Course> lists) {
+			return studService.registerCoursetoStudent(studentId, lists);
 		}
 		
 		public void addStudent(String firstName, String lastName, String studentId,String imageUrl, List<String> courses, String department, String joiningDate, String emailId) {

@@ -7118,3 +7118,38 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 02:00:07.659
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-12-01 17:05:56.406 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-01 17:06:39.275
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-01 17:06:40.597
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-01 17:06:41.820
+!MESSAGE AWS toolkit core plugin initialized after 2545 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-01 17:06:41.995
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-01 17:06:44.887
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-12-01 17:19:58.618
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-12-01 17:19:58.626
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-12-01 17:22:46.844
+!MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
