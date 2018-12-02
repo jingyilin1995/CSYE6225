@@ -58,12 +58,12 @@
         <dependency>
         	<groupId>com.amazonaws</groupId>
         	<artifactId>aws-java-sdk-dynamodb</artifactId>
-        	<version>1.11.297</version>
+        	<version>1.11.297</version><!--$NO-MVN-MAN-VER$-->
         </dependency>
 		<dependency>
     		<groupId>com.amazonaws</groupId>
     		<artifactId>aws-java-sdk-sns</artifactId>
-    		<version>1.11.447</version>
+    		<version>1.11.447</version><!--$NO-MVN-MAN-VER$-->
 		</dependency>
         <!-- uncomment this to get JSON support
         <dependency>

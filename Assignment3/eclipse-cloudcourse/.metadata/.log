@@ -7153,3 +7153,694 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-12-01 17:22:46.844
 !MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
+
+!ENTRY com.amazonaws.eclipse.lambda 4 0 2018-12-01 20:42:27.239
+!MESSAGE Failed to create AWS Lambda Maven Project.
+!STACK 0
+com.amazonaws.eclipse.core.exceptions.AwsActionException: POM C:/Users/Jingyi/eclipse-cloudcourse/assignment3/pom.xml already exists
+	at com.amazonaws.eclipse.lambda.project.wizard.NewLambdaJavaFunctionProjectWizard.doFinish(NewLambdaJavaFunctionProjectWizard.java:98)
+	at com.amazonaws.eclipse.core.plugin.AbstractAwsProjectWizard$1$1.execute(AbstractAwsProjectWizard.java:63)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:107)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at com.amazonaws.eclipse.core.plugin.AbstractAwsProjectWizard$1.run(AbstractAwsProjectWizard.java:70)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.core.runtime.CoreException: POM C:/Users/Jingyi/eclipse-cloudcourse/assignment3/pom.xml already exists
+	at org.eclipse.m2e.core.embedder.MavenModelManager.createMavenModel(MavenModelManager.java:106)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.createSimpleProject(ProjectConfigurationManager.java:694)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.createSimpleProject(ProjectConfigurationManager.java:662)
+	at com.amazonaws.eclipse.core.maven.MavenFactory.createMavenProject(MavenFactory.java:76)
+	at com.amazonaws.eclipse.lambda.project.wizard.NewLambdaJavaFunctionProjectWizard.doFinish(NewLambdaJavaFunctionProjectWizard.java:92)
+	... 7 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 20:42:43.185
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 20:42:43.202
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 20:52:13.956
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 20:52:13.974
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jface.text 2 0 2018-12-01 20:59:07.462
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-12-01 20:59:07.464
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 20:59:07.696
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 20:59:07.735
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 21:04:06.084
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 21:04:06.103
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 22:00:28.986
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 22:00:29.007
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 22:24:36.205
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 22:24:36.233
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 23:57:38.587
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 23:57:38.603
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 23:58:46.368
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-01 23:58:46.384
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:00:52.562
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:00:52.571
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:08:36.195
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:08:36.226
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:17:47.700
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:17:47.716
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:39:00.842
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:39:00.858
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:39:16.688
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:39:16.703
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:45:08.313
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:45:08.329
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:47:37.640
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:47:37.656
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:49:33.438
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:49:33.453
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:51:37.125
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:51:37.141
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:52:20.330
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:52:20.346
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:58:06.064
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 00:58:06.080
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:01:27.189
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:01:27.221
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:01:38.564
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:01:38.580
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:03:23.065
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:03:23.080
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:04:49.941
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 01:04:49.941
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-12-02 01:07:33.331 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:07:45.025
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:07:45.301
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:07:45.770
+!MESSAGE AWS toolkit core plugin initialized after 761 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:07:45.893
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-02 01:07:47.878
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-12-02 01:34:59.927 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:35:23.170
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:35:23.760
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:35:24.371
+!MESSAGE AWS toolkit core plugin initialized after 1202 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 01:35:24.495
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-02 01:35:26.735
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-12-02 11:11:18.850 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:11:52.302
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:11:53.169
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:11:54.210
+!MESSAGE AWS toolkit core plugin initialized after 1908 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:11:54.437
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-02 11:11:57.102
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 11:15:58.910
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 11:15:58.922
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-12-02 11:27:30.140
+!MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 11:30:30.341
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda6324941895227781080.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 11:30:32.694
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda6324941895227781080.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 11:30:35.032
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS created.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 11:30:35.174
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 11:30:35.183
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 11:30:35.291
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 11:30:35.305
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-12-02 11:44:33.686 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-02 11:44:56.818
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:45:00.897
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:45:02.593
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:45:03.373
+!MESSAGE AWS toolkit core plugin initialized after 2477 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 11:45:03.466
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-12-02 12:18:51.108
+!MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
+!SESSION 2018-12-02 12:40:24.303 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:40:33.184
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:40:33.411
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:40:33.803
+!MESSAGE AWS toolkit core plugin initialized after 621 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:40:33.916
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-02 12:40:35.844
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-12-02 12:43:38.310 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-02 12:43:50.636
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:43:52.265
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:43:53.441
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:43:54.492
+!MESSAGE AWS toolkit core plugin initialized after 2228 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:43:54.799
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+!SESSION 2018-12-02 12:45:44.773 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:46:04.738
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:46:05.358
+!MESSAGE Monitoring content of C:\Users\Jingyi\.aws\credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:46:05.987
+!MESSAGE AWS toolkit core plugin initialized after 1250 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2018-12-02 12:46:06.100
+!MESSAGE Found valid identity id cache us-east-1:06e5c6cb-a2b9-4bf9-b9f8-9e339f1bf5f8
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-12-02 12:46:08.080
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Jingyi'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:05:16.813
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:05:21.396
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:08:04.012
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda5827863539229610735.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:08:04.387
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda5827863539229610735.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:08:07.118
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:08:07.179
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:08:07.186
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:08:07.296
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:08:07.324
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jface.text 2 0 2018-12-02 13:16:52.754
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-12-02 13:16:52.763
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:17:08.307
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:17:08.337
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:17:28.406
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:17:28.421
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:20:07.504
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda2082476017904720999.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:20:07.857
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda2082476017904720999.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:20:10.063
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:20:10.114
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:20:10.124
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:20:10.306
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:20:10.360
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2018-12-02 13:28:20.972
+!MESSAGE No repository found at http://download.eclipse.org/windowbuilder/WB/integration/4.7/.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:31:36.412
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:31:36.426
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:31:54.579
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda7414665594514040167.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:31:54.933
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda7414665594514040167.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:31:56.672
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:31:56.718
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:31:56.730
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:31:56.861
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:31:56.892
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:36:51.977
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:36:52.021
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:37:08.393
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda3874480615966213189.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:37:08.755
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda3874480615966213189.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:37:10.486
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:37:10.535
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:37:10.545
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:37:10.670
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:37:10.707
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:39:26.224
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:39:26.247
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:39:40.242
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda5292696191295882201.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:39:40.597
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda5292696191295882201.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:39:42.351
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:39:42.398
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:39:42.408
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:39:42.535
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:39:42.559
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:43:01.017
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:43:01.039
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:43:21.391
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda7782396570618677629.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:43:21.749
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda7782396570618677629.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:43:23.540
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:43:23.593
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 13:43:23.604
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:43:23.737
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:43:23.769
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:59:48.113
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 13:59:48.133
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:00:00.272
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda5061222926135519620.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:00:00.641
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda5061222926135519620.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:00:02.755
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:00:02.802
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:00:02.810
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:00:02.936
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:00:02.968
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:02:39.200
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:02:39.223
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:02:50.698
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda6331091379000140764.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:02:51.061
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda6331091379000140764.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:02:52.857
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:02:52.917
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:02:52.929
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:02:53.051
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:02:53.093
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:13:35.478
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:13:35.497
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:13:52.887
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda8101726815422478339.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:13:53.238
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda8101726815422478339.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:13:55.477
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:13:55.518
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:13:55.531
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:13:55.636
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:13:55.652
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:22:37.587
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:22:37.609
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:23:30.093
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda751045248116779299.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:23:30.470
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda751045248116779299.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:23:32.505
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:23:32.546
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:23:32.555
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:23:32.683
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:23:32.714
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:28:36.438
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:28:36.453
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:29:17.713
+!MESSAGE Exporting project [assign3Lambda] to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda2202476801555730561.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:29:18.057
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign3Lambda-lambda2202476801555730561.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:29:19.847
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:29:19.880
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-02 14:29:19.891
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Assingment3PublishSNS
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:29:20.021
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-02 14:29:20.055
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
