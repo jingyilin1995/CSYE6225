@@ -1,0 +1,76 @@
+package com.amazonaws.lambda.demo;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.InstanceProfileCredentialsProvider;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.DynamoDB;
+import com.amazonaws.services.dynamodbv2.document.Table;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.amazonaws.services.dynamodbv2.model.ScanRequest;
+import com.amazonaws.services.dynamodbv2.model.ScanResult;
+import com.amazonaws.services.dynamodbv2.model.StreamRecord;
+import com.amazonaws.services.lambda.runtime.Context;
+import com.amazonaws.services.lambda.runtime.RequestHandler;
+import com.amazonaws.services.lambda.runtime.events.DynamodbEvent;
+import com.amazonaws.services.lambda.runtime.events.DynamodbEvent.DynamodbStreamRecord;
+
+public class LambdaFunctionHandler implements RequestHandler<DynamodbEvent, Integer> {
+
+	static AmazonDynamoDB dynamoDb;
+	
+    public Integer handleRequest(DynamodbEvent event, Context context) {
+        context.getLogger().log("Received event: " + event);
+
+        for (DynamodbStreamRecord record : event.getRecords()) {
+            context.getLogger().log(record.getEventID());
+            context.getLogger().log(record.getEventName());
+            context.getLogger().log(record.getDynamodb().toString());
+            StreamRecord str = record.getDynamodb();
+            Map<String, AttributeValue> item = str.getNewImage();
+            String boardId = item.get("boardId").toString();  
+            this.initDynamoDbClient();
+            DynamoDB ddb =new DynamoDB(dynamoDb);
+//            Table boardtable = ddb.getTable("courseBoard");
+//            Table coursetable = ddb.getTable("course");
+            
+        }
+        return event.getRecords().size();
+    }
+    private void initDynamoDbClient() {
+    	if(dynamoDb == null) {	
+			AWSCredentialsProvider credentialsProvider;
+			try
+			{
+				credentialsProvider = new InstanceProfileCredentialsProvider(false);
+				credentialsProvider.getCredentials();
+			}
+			catch(Exception e)
+			{
+				credentialsProvider = new ProfileCredentialsProvider();
+				credentialsProvider.getCredentials();
+			}
+			
+			dynamoDb = AmazonDynamoDBClientBuilder
+					.standard()
+					.withCredentials(credentialsProvider)
+					.withRegion("us-east-2")
+					.build();
+		}
+    }
+    private String getTopicArn(Table boardtable, Table coursetable) {
+    	 Map<String, AttributeValue> attributeValues = new HashMap<String, AttributeValue>();
+         attributeValues.put(":val1", new AttributeValue().withN("boardId"));
+         ScanRequest scanRequest = new ScanRequest()
+        		 .withTableName("courseBoard")
+        		 .withFilterExpression("boardId = :val1");
+         ScanResult scanResult = dynamoDb.scan(scanRequest);
+         List<Map<String,AttributeValue>> results = scanResult.getItems();
+    }
+    
+}
