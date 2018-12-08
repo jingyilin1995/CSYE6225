@@ -124,6 +124,7 @@ public class StudentsService {
 	//Register Student for Course action
 	//if lists have more than 3 courses, we only register the first 3 courses
 	public Student registerCoursetoStudent(String studentId, ArrayList<Course> lists) {
+		CourseRostersService crs = new CourseRostersService();
 		Map<String, AttributeValue> eav = new HashMap<String, AttributeValue>();
 		eav.put(":stud", new AttributeValue().withS(studentId));
 		DynamoDBQueryExpression<Student> queryExpression = new DynamoDBQueryExpression<Student>()
@@ -139,6 +140,8 @@ public class StudentsService {
 			if(stud.getCourses().size()<3) {
 				courselist.add(lists.get(i).getCourseId());
 				this.subscribeTopic(stud, lists.get(i).getCourseId());
+				crs.updateRosterAddStudent(lists.get(i).getCourseId(), stud);
+				
 			}
 		}
 		stud.setCourses(courselist);

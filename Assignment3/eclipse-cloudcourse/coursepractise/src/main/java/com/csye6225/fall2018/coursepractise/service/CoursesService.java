@@ -66,7 +66,7 @@ public class CoursesService {
 		List<CourseBoard> scanResult2 = mapper.scan(CourseBoard.class, scanExpression);
 		long rosterId = scanResult.size()+1;
 		long boardId = scanResult2.size()+1;
-		Course cour=new Course(courseId,taId,professorId,lectures,boardId,rosterId,department);
+		Course cour=new Course(courseId,taId,professorId,lectures,department);
 		rosterService.addCourseRoster(rosterId,courseId);
 		boardService.addCourseBoard(boardId,courseId);
 		lectureService.addLecture(courseId, lectures);
@@ -79,7 +79,7 @@ public class CoursesService {
 	}
 	
 	public Course addCourse(Course cour) {
-		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+/*		DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
 		List<CourseRoster> scanResult = mapper.scan(CourseRoster.class, scanExpression);
 		List<CourseBoard> scanResult2 = mapper.scan(CourseBoard.class, scanExpression);
 		long rosterId = scanResult.size()+1;
@@ -90,7 +90,7 @@ public class CoursesService {
 		rosterService.addCourseRoster(cour.getRosterId(),cour.getCourseId());
 		boardService.addCourseBoard(cour.getBoardId(),cour.getCourseId());
 		lectureService.addLecture(cour.getCourseId(), cour.getLectures());
-		CreateTopicRequest createTopicRequest = new CreateTopicRequest(cour.getCourseId());
+*/		CreateTopicRequest createTopicRequest = new CreateTopicRequest(cour.getCourseId());
 		CreateTopicResult createTopicResult = snsClient.createTopic(createTopicRequest);
 		System.out.println(createTopicResult);
 		System.out.println("CreateTopicRequest - " + snsClient.getCachedResponseMetadata(createTopicRequest));
