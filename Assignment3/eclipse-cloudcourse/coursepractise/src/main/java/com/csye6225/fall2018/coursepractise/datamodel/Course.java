@@ -24,13 +24,13 @@ public class Course {
 	public Course() {
 		
 	}
-	public Course(String courseId, String taId, String professorId, List<Long> lectures, long boardId, long rosterId, String department ) {
+	public Course(String courseId, String taId, String professorId, List<Long> lectures, String department ) {
 		this.setCourseId(courseId);
 		this.setTaId(taId);
 		this.setProfessorId(professorId);
 		this.setLectures(lectures);
-		this.setBoardId(boardId);
-		this.setRosterId(rosterId);
+//		this.setBoardId(boardId);
+//		this.setRosterId(rosterId);
 		this.setDepartment(department);
 		
 	}

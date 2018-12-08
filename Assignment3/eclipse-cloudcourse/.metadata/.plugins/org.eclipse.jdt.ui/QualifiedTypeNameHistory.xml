@@ -49,10 +49,8 @@
 <fullyQualifiedTypeName name="com.amazonaws.services.lambda.runtime.RequestHandler"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.AttributeValue"/>
-<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.StreamRecord"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.Table"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient"/>
-<fullyQualifiedTypeName name="com.amazonaws.auth.EnvironmentVariableCredentialsProvider"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.datamodeling.DynamoDB"/>
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.document.DynamoDB"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.ScanResult"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.amazonaws.auth.EnvironmentVariableCredentialsProvider"/>
+<fullyQualifiedTypeName name="com.amazonaws.services.dynamodbv2.model.StreamRecord"/>
 </qualifiedTypeNameHistroy>

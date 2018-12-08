@@ -5,6 +5,8 @@ C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\
 \assignment3\src\main\java
 C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\902133184.index
 \jersey-quickstart-webapp\src\main\java
+C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3614843270.index
+\coursepractise2\src\main\java
 C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3074551536.index
 \courseservice\src\main\java
 C:\Users\Jingyi\eclipse-cloudcourse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\46656206.index
