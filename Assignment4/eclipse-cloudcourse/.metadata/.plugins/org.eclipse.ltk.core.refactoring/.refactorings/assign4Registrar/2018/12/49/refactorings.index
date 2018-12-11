@@ -1,0 +1,16 @@
+1544300639393	Delete element
+1544300968130	Encapsulate field 'RegistrationId'
+1544300972630	Encapsulate field 'OfferingId'
+1544300976572	Encapsulate field 'OfferingType'
+1544300979828	Encapsulate field 'Department'
+1544300983229	Encapsulate field 'PerUnitPrice'
+1544301349169	Move compilation unit
+1544306129622	Copy compilation unit
+1544306140553	Copy compilation unit
+1544306146062	Copy compilation unit
+1544306826390	Encapsulate field 'RegistrationId'
+1544306856415	Encapsulate field 'RegistrationId'
+1544306866501	Encapsulate field 'OfferingId'
+1544306875710	Encapsulate field 'OfferingType'
+1544306884909	Encapsulate field 'Department'
+1544306895013	Encapsulate field 'PerUnitPrice'

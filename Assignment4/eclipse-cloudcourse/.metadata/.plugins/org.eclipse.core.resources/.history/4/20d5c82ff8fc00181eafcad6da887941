@@ -1,0 +1,35 @@
+package com.amazonaws.lambda.demo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.model.AttributeValue;
+import com.amazonaws.services.dynamodbv2.model.StreamRecord;
+import com.amazonaws.services.lambda.runtime.Context;
+import com.amazonaws.services.lambda.runtime.RequestHandler;
+import com.amazonaws.services.lambda.runtime.events.DynamodbEvent;
+import com.amazonaws.services.lambda.runtime.events.DynamodbEvent.DynamodbStreamRecord;
+
+public class ReadCourseData implements RequestHandler<DynamodbEvent, Map<String, AttributeValue>> {
+//Start in the step function
+	static AmazonDynamoDB dynamoDb;
+    @Override
+    public Map<String, AttributeValue> handleRequest(DynamodbEvent event, Context context) {
+        context.getLogger().log("Received event: " + event);
+        Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
+        for (DynamodbStreamRecord record : event.getRecords()) {
+        	if(record == null) {
+            	continue;
+            }
+            context.getLogger().log(record.getEventID());
+            context.getLogger().log(record.getEventName());
+            context.getLogger().log(record.getDynamodb().toString());
+            StreamRecord str = record.getDynamodb();
+            item = str.getNewImage();
+
+            return item;
+        }
+        return item;
+    }
+}

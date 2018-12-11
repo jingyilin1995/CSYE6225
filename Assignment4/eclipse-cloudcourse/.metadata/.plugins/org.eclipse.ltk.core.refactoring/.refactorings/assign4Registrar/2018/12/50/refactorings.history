@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Registrar.java&apos; to &apos;assign4UpdateRegistrar/src/main/java/com.amazonaws.lambda.demo&apos;&#x0D;&#x0A;- Original project: &apos;assign4Registrar&apos;&#x0D;&#x0A;- Destination element: &apos;assign4UpdateRegistrar/src/main/java/com.amazonaws.lambda.demo&apos;&#x0D;&#x0A;- Original element: &apos;com.csye6225.fall2018.assign4Registrar.datamodel.Registrar.java&apos;" description="Copy compilation unit" destination="=assign4UpdateRegistrar/src\/main\/java&lt;com.amazonaws.lambda.demo" element1="/src\/main\/java&lt;com.csye6225.fall2018.assign4Registrar.datamodel{Registrar.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1544566702447" units="1" version="1.0"/>
+</session>
