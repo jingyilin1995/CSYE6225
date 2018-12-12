@@ -48,6 +48,7 @@ public class LambdaFunctionHandler implements RequestHandler<Object, Object> {
 					.withCredentials(new EnvironmentVariableCredentialsProvider())
 					.withRegion("us-east-2")
 					.build();
+			mapper = new DynamoDBMapper(dynamoDb);
 		}
     }
 

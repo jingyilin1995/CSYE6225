@@ -8973,3 +8973,246 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 14:24:20.149
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 14:39:08.889
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 14:39:08.905
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 17:47:12.318
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 17:47:12.333
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 17:49:04.815
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 17:49:04.855
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:00:50.932
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:00:50.955
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:01:39.915
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:01:39.947
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:01:51.385
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:01:51.400
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:02:15.810
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:02:15.841
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:03:18.930
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:03:18.950
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:11.968
+!MESSAGE Exporting project [assign4UpdateBoard] to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateBoard-lambda3731353765513234299.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:12.314
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateBoard-lambda3731353765513234299.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:14.355
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateBoard created.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:14.422
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:14.431
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateBoard
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:04:14.607
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:04:14.641
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:48.574
+!MESSAGE Exporting project [assign4UpdateRegistrar] to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateRegistrar-lambda7501837778981903687.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:48.931
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateRegistrar-lambda7501837778981903687.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:50.961
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateRegistrar updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:51.013
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 18:04:51.021
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateRegistrar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:04:51.130
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:04:51.155
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:40:04.706
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:40:04.755
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:56:32.777
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:56:32.799
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:56:51.548
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 18:56:51.590
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:04:31.129
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:04:31.151
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:04:45.482
+!MESSAGE Exporting project [assign4LambdaAccessStepFunction] to C:\Users\Jingyi\AppData\Local\Temp\assign4LambdaAccessStepFunction-lambda1972100346609127469.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:04:45.854
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign4LambdaAccessStepFunction-lambda1972100346609127469.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:04:47.777
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Ass4InvokeStepFunction updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:04:47.835
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:04:47.849
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Ass4InvokeStepFunction
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:04:47.958
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:04:48.009
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:17:27.667
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:17:27.688
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:17:39.163
+!MESSAGE Exporting project [assign4LambdaAccessStepFunction] to C:\Users\Jingyi\AppData\Local\Temp\assign4LambdaAccessStepFunction-lambda1285602793430889973.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:17:39.531
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign4LambdaAccessStepFunction-lambda1285602793430889973.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:17:41.788
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Ass4InvokeStepFunction updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:17:41.841
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 19:17:41.851
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Ass4InvokeStepFunction
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:17:41.978
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 19:17:42.019
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:30:37.168
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:30:37.186
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:30:51.558
+!MESSAGE Exporting project [assign4UpdateRegistrar] to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateRegistrar-lambda4168033957099780758.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:30:51.905
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateRegistrar-lambda4168033957099780758.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:30:54.133
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateRegistrar updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:30:54.171
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:30:54.184
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateRegistrar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:30:54.282
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:30:54.298
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:31:17.664
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:31:17.687
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:31:34.504
+!MESSAGE Exporting project [assign4UpdateBoard] to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateBoard-lambda8642850392647229950.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:31:34.844
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateBoard-lambda8642850392647229950.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:31:36.794
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateBoard updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:31:36.811
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:31:36.819
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateBoard
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:31:36.925
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:31:36.944
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:36:53.991
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:36:54.003
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:37:13.131
+!MESSAGE Exporting project [assign4UpdateBoard] to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateBoard-lambda4596235077158356350.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:37:13.480
+!MESSAGE Project exported to C:\Users\Jingyi\AppData\Local\Temp\assign4UpdateBoard-lambda4596235077158356350.zip
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:37:15.436
+!MESSAGE Function arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateBoard updated.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:37:15.468
+!MESSAGE Project metadata saved.
+
+!ENTRY com.amazonaws.eclipse.lambda 1 0 2018-12-11 21:37:15.477
+!MESSAGE Upload complete! Funtion arn arn:aws:lambda:us-east-2:619958465375:function:Ass4UpdateBoard
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:37:15.641
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-12-11 21:37:15.661
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!

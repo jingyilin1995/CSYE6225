@@ -1,0 +1,13 @@
+127.0.0.1 - - [11/Dec/2018:18:15:23 -0800] "GET / HTTP/1.1" 404 1036
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:18:15:32 -0800] "GET /coursepractise/ HTTP/1.1" 200 247
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:18:15:44 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 258
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:19:14:13 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:19:32:25 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:20:06:08 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:20:48:34 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:20:51:55 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:20:55:16 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:21:00:28 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:21:32:54 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:21:43:25 -0800] "POST /coursepractise/webapi/courses HTTP/1.1" 200 283
+0:0:0:0:0:0:0:1 - - [11/Dec/2018:22:09:08 -0800] "GET /coursepractise/webapi/courses/12112018TestCourse1 HTTP/1.1" 200 283
