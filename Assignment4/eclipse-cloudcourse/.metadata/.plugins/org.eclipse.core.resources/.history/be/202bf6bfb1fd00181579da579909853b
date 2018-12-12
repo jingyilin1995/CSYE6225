@@ -1,0 +1,48 @@
+package com.amazonaws.lambda.demo;
+
+import java.util.List;
+import java.util.Map;
+
+import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
+import com.amazonaws.services.lambda.runtime.Context;
+import com.amazonaws.services.lambda.runtime.RequestHandler;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class UpdateBoardTable implements RequestHandler<Object, Object> {
+
+	private static AmazonDynamoDB dynamoDb;
+	private static DynamoDBMapper mapper;
+	
+    @Override
+    public Object handleRequest(Object input, Context context) {
+        context.getLogger().log("Input: " + input);
+        
+        this.initDynamoDbClient();
+        ObjectMapper objectMapper = new ObjectMapper();
+        Map<String, Object> map = objectMapper.convertValue(input, Map.class);
+        String courseId = map.get("courseId").toString();
+        CourseBoard courseBoard = new CourseBoard();
+        courseBoard.setCourseId(courseId);
+        DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+        List<CourseBoard> scanResult2 = mapper.scan(CourseBoard.class, scanExpression);
+        long boardId = scanResult2.size();
+        courseBoard.setBoardId(boardId);
+        
+        mapper.save(courseBoard);
+        
+        return input;
+    }
+    private void initDynamoDbClient() {
+    	if(dynamoDb == null) {				
+			dynamoDb = AmazonDynamoDBClientBuilder
+					.standard()
+					.withCredentials(new EnvironmentVariableCredentialsProvider())
+					.withRegion("us-east-2")
+					.build();
+		}
+    }
+}
